@@ -22,17 +22,10 @@ public abstract class Jugador {
         return skillsJugador;
     }
 
-    public void setSkillsJugador(int skillsJugador) {
-        this.skillsJugador = skillsJugador;
-    }
-
     public Integer getPesoJugador() {
         return pesoJugador;
     }
-
-    public void setPesoJugador(int pesoJugador) {
-        this.pesoJugador = pesoJugador;
-    }
+    
 
 
 
