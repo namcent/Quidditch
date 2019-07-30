@@ -1,7 +1,7 @@
 package main.java;
 
 public class SaetaDeFuego implements Escoba {
-    Integer velocidadEscoba(){
+    public Integer velocidadEscoba(){
         return 100;
     }
 
