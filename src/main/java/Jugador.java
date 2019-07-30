@@ -1,15 +1,16 @@
 package main.java;
 
 public abstract class Jugador {
-    private Integer skillsJugador;
-    private Integer pesoJugador;
+    protected Integer skillsJugador;
+    protected Integer pesoJugador;
     public Escoba escoba;
 
 
     /** Constructor **/
-    public Jugador(Integer skillsJugador, Integer pesoJugador){
+    public Jugador(Integer skillsJugador, Integer pesoJugador, Escoba escoba){
         this.skillsJugador=skillsJugador;
         this.pesoJugador=pesoJugador;
+        this.escoba=escoba;
     }
 
     /** Punto 1.a **/
@@ -19,14 +20,14 @@ public abstract class Jugador {
 
     /** Punto 1.b **/
     public Integer velocidadJugador(){
-        return velocidadEscoba * nivelManejoDeEscoba();
+        return velocidadEscoba() * nivelManejoDeEscoba();
     }
 
     //public Integer velocidadEscoba; //???????????????????????????????????
 
     //public Integer habilidadJugador(){}
 
-    
+
     /** Getters **/
 
     public Integer getSkillsJugador() {

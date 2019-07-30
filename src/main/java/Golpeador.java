@@ -3,15 +3,16 @@ package main.java;
 public class Golpeador extends Jugador {
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
-    private Integer skillsJugador;
-    private Integer pesoJugador;
+    //private Integer skillsJugador;
+    //private Integer pesoJugador;
 
     /**Constructor**/
-    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Integer skillsJugador, Integer pesoJugador){
+    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Integer pesoJugador, Integer skillsJugador, Escoba escoba){
+        super(pesoJugador, skillsJugador, escoba);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
-        this.skillsJugador = skillsJugador;
-        this.pesoJugador = pesoJugador;
+        //this.skillsJugador = skillsJugador;
+        //this.pesoJugador = pesoJugador;
     }
 
     public Integer habilidadJugador(){
