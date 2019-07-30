@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Nimbus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Nimbus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SaetaDeFuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SaetaDeFuego.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Jugador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="425">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="e#478#479#0" expanded="true" />
                 <element signature="e#527#528#0" expanded="true" />
                 <element signature="e#567#568#0" expanded="true" />
                 <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,13 +39,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Nimbus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+            <state relative-caret-position="408">
+              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="e#170#171#0" expanded="true" />
                 <element signature="e#212#213#0" expanded="true" />
                 <element signature="e#517#518#0" expanded="true" />
                 <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,13 +132,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Escoba.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Jugador.java" />
         <option value="$PROJECT_DIR$/src/main/java/Cazador.java" />
         <option value="$PROJECT_DIR$/src/main/java/Guardian.java" />
         <option value="$PROJECT_DIR$/src/main/java/Golpeador.java" />
         <option value="$PROJECT_DIR$/src/main/java/Buscador.java" />
         <option value="$PROJECT_DIR$/src/main/java/SaetaDeFuego.java" />
         <option value="$PROJECT_DIR$/src/main/java/Nimbus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Jugador.java" />
       </list>
     </option>
   </component>
@@ -308,26 +315,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Nimbus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="408">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
             <element signature="e#170#171#0" expanded="true" />
             <element signature="e#212#213#0" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
             <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Jugador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="425">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
             <element signature="e#478#479#0" expanded="true" />
             <element signature="e#527#528#0" expanded="true" />
             <element signature="e#567#568#0" expanded="true" />
             <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
           </folding>
         </state>
       </provider>

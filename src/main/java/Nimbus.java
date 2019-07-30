@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.Date;
+
 public class Nimbus implements Escoba{
     public Integer anioDeFabricacion;
     public Integer porcentajeSaludEscoba;
@@ -17,7 +19,10 @@ public class Nimbus implements Escoba{
         return anioActual-anioDeFabricacion;
     }
 
-    public Integer velocidadEscoba(){
-        return (80 - cantDeAniosDesdeFabricacion()) * porcentajeSaludEscoba;
+    public Double getPorcentajeSaludEscoba(){
+        return porcentajeSaludEscoba/100;
+    }
+    public Double velocidadEscoba(){
+        return (80 - cantDeAniosDesdeFabricacion()) * getPorcentajeSaludEscoba();
     }
 }
