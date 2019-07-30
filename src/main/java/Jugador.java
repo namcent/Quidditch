@@ -1,24 +1,24 @@
 package main.java;
 
 public abstract class Jugador {
-    private int skillsJugador;
-    private int pesoJugador;
+    private Integer skillsJugador;
+    private Integer pesoJugador;
     public Escoba escoba;
-    public int velocidadEscoba; //???????????????????????????????????
+    public Integer velocidadEscoba; //???????????????????????????????????
 
-    public int habilidadJugador(){}
+    //public Integer habilidadJugador(){}
 
-    public int nivelManejoDeEscoba(){
+    public Integer nivelManejoDeEscoba(){
         return getSkillsJugador() / getPesoJugador();
     };
 
-    public int velocidadJugador(){
+    public Integer velocidadJugador(){
         return velocidadEscoba * nivelManejoDeEscoba();
     }
 
     /** Getters y Setters **/
 
-    public int getSkillsJugador() {
+    public Integer getSkillsJugador() {
         return skillsJugador;
     }
 
@@ -26,7 +26,7 @@ public abstract class Jugador {
         this.skillsJugador = skillsJugador;
     }
 
-    public int getPesoJugador() {
+    public Integer getPesoJugador() {
         return pesoJugador;
     }
 
