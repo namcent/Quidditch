@@ -23,9 +23,9 @@ public abstract class Jugador {
         return velocidadEscoba() * nivelManejoDeEscoba();
     }
 
-    
+    /** Punto 1.c **/
     public Integer habilidadJugador(){
-        return ;
+        return velocidadJugador()+skillsJugador;
     }
 
 

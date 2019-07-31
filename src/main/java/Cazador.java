@@ -16,6 +16,6 @@ public class Cazador extends Jugador {
     }
 
     public Integer habilidadJugador(){
-        return velocidadJugador()+ skillsJugador + punteriaJugador * fuerzaJugador;
+        return super.habilidadJugador()+ punteriaJugador * fuerzaJugador;
     }
 }

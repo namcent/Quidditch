@@ -16,6 +16,6 @@ public class Guardian extends Jugador {
     }
 
     public Integer habilidadJugador(){
-        return velocidadJugador()+ skillsJugador + nivelReflejos + fuerzaJugador;
+        return super.habilidadJugador()+ nivelReflejos + fuerzaJugador;
     }
 }

@@ -16,6 +16,6 @@ public class Buscador extends Jugador {
     }
 
     public Integer habilidadJugador(){
-        return velocidadJugador()+ skillsJugador + nivelReflejos * nivelVision;
+        return super.habilidadJugador() + nivelReflejos * nivelVision;
     }
 }
