@@ -2,33 +2,34 @@ package main.java;
 
 //import java.util.Random;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Jugador {
-    protected Integer skillsJugador;
+    protected Double skillsJugador;
     protected Integer pesoJugador;
     public Escoba escoba;
 
 
     /** Constructor **/
-    public Jugador(Integer skillsJugador, Integer pesoJugador, Escoba escoba){
+    public Jugador(Double skillsJugador, Integer pesoJugador, Escoba escoba){
         this.skillsJugador=skillsJugador;
         this.pesoJugador=pesoJugador;
         this.escoba=escoba;
     }
 
     /** Punto 1.a **/
-    public Integer nivelManejoDeEscoba(){
+    public Double nivelManejoDeEscoba(){
         return skillsJugador/ pesoJugador;
     }
 
     /** Punto 1.b **/
-    public Integer velocidadJugador(){
+    public Double velocidadJugador(){
         return escoba.velocidadEscoba() * nivelManejoDeEscoba();
     }
 
     /** Punto 1.c **/
-    public Integer habilidadJugador(){
+    public Double habilidadJugador(){
         return velocidadJugador()+skillsJugador;
     }
 
@@ -39,11 +40,17 @@ public abstract class Jugador {
 
     /** Punto 2.b **/
     public Boolean esGroso(){
-        return habilidadJugador()>promedioHabilidadEquipo() && velocidadJugador()>valorArbitrario();
+        return habilidadJugador()>promedioHabilidadEquipo(jugadores) && velocidadJugador()>valorArbitrario();
     }
 
-    public Integer promedioHabilidadEquipo(List<Integer> list){
-        return ;
+    private List <Jugador> jugadores = new ArrayList<>();
+
+    public void agregarJugador(Jugador jugador){
+        jugadores.add(jugador);
+    }
+
+    public Double promedioHabilidadEquipo(List <Jugador> jugadores){
+        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
     }
 
     public Integer valorArbitrario(){
@@ -52,7 +59,7 @@ public abstract class Jugador {
 
     /** Getters **/
 
-    public Integer getSkillsJugador() {
+    public Double getSkillsJugador() {
         return skillsJugador;
     }
 

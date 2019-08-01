@@ -4,10 +4,10 @@ import java.util.Calendar;
 
 public class Nimbus implements Escoba{
     public Integer anioDeFabricacion;
-    public Integer porcentajeSaludEscoba;
+    public Double porcentajeSaludEscoba;
 
 
-    public Nimbus(Integer anioDeFabricacion, Integer porcentajeSaludEscoba){
+    public Nimbus(Integer anioDeFabricacion, Double porcentajeSaludEscoba){
         this.anioDeFabricacion=anioDeFabricacion;
         this.porcentajeSaludEscoba=porcentajeSaludEscoba;
     }
