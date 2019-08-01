@@ -1,5 +1,9 @@
 package main.java;
 
+//import java.util.Random;
+
+import java.util.List;
+
 public abstract class Jugador {
     protected Integer skillsJugador;
     protected Integer pesoJugador;
@@ -20,7 +24,7 @@ public abstract class Jugador {
 
     /** Punto 1.b **/
     public Integer velocidadJugador(){
-        return velocidadEscoba() * nivelManejoDeEscoba();
+        return escoba.velocidadEscoba() * nivelManejoDeEscoba();
     }
 
     /** Punto 1.c **/
@@ -28,6 +32,23 @@ public abstract class Jugador {
         return velocidadJugador()+skillsJugador;
     }
 
+    /** Punto 2.a **/
+    public Boolean lePasaElTrapo(Jugador jugador){
+        return this.habilidadJugador()>=jugador.habilidadJugador()*2;
+    }
+
+    /** Punto 2.b **/
+    public Boolean esGroso(){
+        return habilidadJugador()>promedioHabilidadEquipo() && velocidadJugador()>valorArbitrario();
+    }
+
+    public Integer promedioHabilidadEquipo(List<Integer> list){
+        return ;
+    }
+
+    public Integer valorArbitrario(){
+        return (int)(Math.random()*10)+1;
+    }
 
     /** Getters **/
 

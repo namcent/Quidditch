@@ -1,22 +1,23 @@
 package main.java;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class Nimbus implements Escoba{
     public Integer anioDeFabricacion;
     public Integer porcentajeSaludEscoba;
 
-    public Integer anioActual(){
-        return new Date().getYear();
-    }
 
     public Nimbus(Integer anioDeFabricacion, Integer porcentajeSaludEscoba){
         this.anioDeFabricacion=anioDeFabricacion;
         this.porcentajeSaludEscoba=porcentajeSaludEscoba;
     }
 
+    public Integer anioActual(){
+        return Calendar.getInstance().get(Calendar.YEAR);
+    }
+
     public Integer cantDeAniosDesdeFabricacion(){
-        return anioActual-anioDeFabricacion;
+        return anioActual()-anioDeFabricacion;
     }
 
     public Double getPorcentajeSaludEscoba(){
