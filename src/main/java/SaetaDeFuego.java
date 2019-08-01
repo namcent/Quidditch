@@ -1,8 +1,8 @@
 package main.java;
 
 public class SaetaDeFuego implements Escoba {
-    public Integer velocidadEscoba(){
-        return 100;
+    public Double velocidadEscoba(){
+        return 100.0;
     }
 
 }

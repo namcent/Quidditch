@@ -7,7 +7,7 @@ public class Guardian extends Jugador {
     //private Integer pesoJugador;
 
     /**Constructor**/
-    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Integer pesoJugador, Integer skillsJugador, Escoba escoba){
+    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba){
         super(pesoJugador, skillsJugador, escoba);
         this.nivelReflejos = nivelReflejos;
         this.fuerzaJugador = fuerzaJugador;
@@ -15,7 +15,7 @@ public class Guardian extends Jugador {
         //this.pesoJugador = pesoJugador;
     }
 
-    public Integer habilidadJugador(){
+    public Double habilidadJugador(){
         return super.habilidadJugador()+ nivelReflejos + fuerzaJugador;
     }
 }
