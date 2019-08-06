@@ -17,8 +17,22 @@ public class Equipo {
         return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
     }
 
+//    public Boolean tieneJugadorEstrella(Equipo equipo){
+//        return this.mejorJugador().lePasaElTrapo(equipo.mejorJugador());
+//    }
+//
+//    public Jugador mejorJugador(){
+//        return this.jugadores.stream()
+//                .max(Comparator.comparing(jugador->jugador.habilidadJugador())).get();
+//    }
+
+    /** Punto 2.c **/
     public Boolean tieneJugadorEstrella(Equipo segundoEquipo){
-        return jugadores.stream().anyMatch();
+       return jugadores.stream().anyMatch(jugador -> segundoEquipo.lePasaElTrapoATodos(jugador));
+    }
+
+    public Boolean lePasaElTrapoATodos(Jugador unJugador){
+        return jugadores.stream().allMatch(jugador -> unJugador.lePasaElTrapo(jugador));
     }
 
     }
