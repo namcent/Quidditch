@@ -1,6 +1,6 @@
 package main.java;
 
-public class SaetaDeFuego implements Escoba {
+public class SaetaDeFuego extends Escoba {
     public Double velocidadEscoba(){
         return 100.0;
     }

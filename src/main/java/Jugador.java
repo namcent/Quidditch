@@ -42,7 +42,7 @@ public abstract class Jugador {
 
     /** Punto 2.b **/
     public Boolean esGroso(){
-        return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>valorArbitrario();
+        return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>escoba.getValorArbitrario();
     }
 
     //private List <Jugador> jugadores = new ArrayList<>();
@@ -55,9 +55,9 @@ public abstract class Jugador {
 //        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
 //    }
 
-    public Integer valorArbitrario(){
-        return (int)(Math.random()*10)+1;
-    }
+    //public Integer valorArbitrario(){
+    //    return (int)(Math.random()*10)+1;
+    //}
 
     /** Getters **/
 

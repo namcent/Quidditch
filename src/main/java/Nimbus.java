@@ -2,9 +2,10 @@ package main.java;
 
 import java.util.Calendar;
 
-public class Nimbus implements Escoba{
+public class Nimbus extends Escoba{
     public Integer anioDeFabricacion;
     public Double porcentajeSaludEscoba;
+    //public Double valorArbitrario;
 
 
     public Nimbus(Integer anioDeFabricacion, Double porcentajeSaludEscoba){
@@ -26,4 +27,8 @@ public class Nimbus implements Escoba{
     public Double velocidadEscoba(){
         return (80 - cantDeAniosDesdeFabricacion()) * getPorcentajeSaludEscoba();
     }
+
+//    public Double actualizacionValorArbitrario(){
+//        return ;
+//    }
 }
