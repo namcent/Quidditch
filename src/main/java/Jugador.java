@@ -10,6 +10,7 @@ public abstract class Jugador {
     public Equipo equipo;
 
 
+
     /** Constructor **/
     public Jugador(Double skillsJugador, Integer pesoJugador, Escoba escoba, Equipo equipo){
         this.skillsJugador=skillsJugador;
@@ -66,6 +67,8 @@ public abstract class Jugador {
     public Integer getPesoJugador() {
         return pesoJugador;
     }
+
+
 
 
 

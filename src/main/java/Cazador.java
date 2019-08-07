@@ -18,4 +18,5 @@ public class Cazador extends Jugador {
     public Double habilidadJugador(){
         return super.habilidadJugador()+ punteriaJugador * fuerzaJugador;
     }
+
 }

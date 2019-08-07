@@ -2,8 +2,6 @@ package main.java;
 
 public abstract class Escoba {
 
-    /** Punto 2.b **/
-
     private static Double valorArbitrario;
 
     public Double getValorArbitrario() {

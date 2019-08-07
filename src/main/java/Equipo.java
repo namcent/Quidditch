@@ -3,19 +3,12 @@ package main.java;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Random;
+
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
 
-
-
-    public void agregarJugador(Jugador jugador){
-        jugadores.add(jugador);
-    }
-
-    public Double promedioHabilidadEquipo(){
-        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
-    }
 
 //    public Boolean tieneJugadorEstrella(Equipo equipo){
 //        return this.mejorJugador().lePasaElTrapo(equipo.mejorJugador());
@@ -35,5 +28,26 @@ public class Equipo {
         return jugadores.stream().allMatch(jugador -> unJugador.lePasaElTrapo(jugador));
     }
 
+
+    public void agregarJugador(Jugador jugador) {
+        jugadores.add(jugador);
     }
 
+    public Double promedioHabilidadEquipo() {
+        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum)) / jugadores.size();
+    }
+
+
+
+    /**Punto3**/
+
+    public Jugador jugadorRandom() {
+        Random rand = new Random();
+        return this.jugadores.get(rand.nextInt(jugadores.size()));
+
+    }
+
+
+
+
+}

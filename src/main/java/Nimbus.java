@@ -8,27 +8,28 @@ public class Nimbus extends Escoba{
     //public Double valorArbitrario;
 
 
-    public Nimbus(Integer anioDeFabricacion, Double porcentajeSaludEscoba){
-        this.anioDeFabricacion=anioDeFabricacion;
-        this.porcentajeSaludEscoba=porcentajeSaludEscoba;
+    public Nimbus(Integer anioDeFabricacion, Double porcentajeSaludEscoba) {
+        this.anioDeFabricacion = anioDeFabricacion;
+        this.porcentajeSaludEscoba = porcentajeSaludEscoba;
     }
 
-    public Integer anioActual(){
+    public Integer anioActual() {
         return Calendar.getInstance().get(Calendar.YEAR);
     }
 
-    public Integer cantDeAniosDesdeFabricacion(){
-        return anioActual()-anioDeFabricacion;
+    public Integer cantDeAniosDesdeFabricacion() {
+        return anioActual() - anioDeFabricacion;
     }
 
-    public Double getPorcentajeSaludEscoba(){
-        return porcentajeSaludEscoba/100;
+    public Double getPorcentajeSaludEscoba() {
+        return porcentajeSaludEscoba / 100;
     }
-    public Double velocidadEscoba(){
+
+    public Double velocidadEscoba() {
         return (80 - cantDeAniosDesdeFabricacion()) * getPorcentajeSaludEscoba();
     }
 
-//    public Double actualizacionValorArbitrario(){
-//        return ;
-//    }
 }
+
+
+

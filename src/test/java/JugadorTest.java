@@ -2,7 +2,10 @@ package test.java;
 
 import main.java.*;
 import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class JugadorTest {
     private Golpeador jugadorcontr6;
     private Golpeador jugadorcontr7;
 
+    private Nimbus roberta;
     private Nimbus escoba1;
     private SaetaDeFuego escoba2;
     private Equipo griffindor;
@@ -54,7 +58,10 @@ public class JugadorTest {
         jugadorcontr6=new Golpeador(64, 75, 85.0, 54, escoba1, slytherin);
         jugadorcontr7=new Golpeador(15, 16, 80.0, 15, escoba2, slytherin);
 
-
+        roberta = new Nimbus(1999, 50.0);
+        griffindor = new Equipo();
+        slytherin= new Equipo();
+        harrypotter = new Buscador(10, 5, 75.0, 5, roberta, griffindor);
 
         griffindor.agregarJugador(harrypotter);
         griffindor.agregarJugador(jugador1);
@@ -71,6 +78,7 @@ public class JugadorTest {
         slytherin.agregarJugador(jugadorcontr5);
         slytherin.agregarJugador(jugadorcontr6);
         slytherin.agregarJugador(jugadorcontr7);
+
     }
 
     @Test
