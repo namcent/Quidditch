@@ -39,6 +39,7 @@ public class Equipo {
     }
 
     /** Punto 3 **/
+    /** Inicio Random **/
     private List<Integer> rango = IntStream.range(1, jugadores.size()).boxed().collect(Collectors.toList());
 
     public int getRandomElement(List<Integer> list)
@@ -50,6 +51,12 @@ public class Equipo {
     public Jugador jugadorQueJuegaElTurno(){
         return jugadores.get(getRandomElement(rango));
     }
-    /** Fin **/
+    /** Fin Random **/
+
+    public Boolean puedenBloquear(Jugador unjugador){
+        return this.jugadores.stream()
+                .anyMatch(jugador -> jugador.puedeBloquear(unjugador));
+    }
+
     }
 

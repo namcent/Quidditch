@@ -28,15 +28,15 @@ public class Cazador extends Jugador {
         }
     }
     private Boolean tieneQuaffle;
-    public Boolean intentaMeterGol(){
-        this.evitarBloqueos();
+    public Boolean intentaMeterGol(Jugador jugador){
+        this.evitarBloqueos(jugador);
         if (metioGol()=true){
             this.equipo.puntajeEquipo = equipo.puntajeEquipo +10;
             this.skillsJugador=skillsJugador+5;
         }
     }
     public Boolean evitarBloqueos(Jugador jugador){
-        if (this.puedeBloquear(Jugador jugador)){
+        if (equipo.puedenBloquear(jugador)){
 
         }
         //return !intentaBloquear(equipoContrario);
