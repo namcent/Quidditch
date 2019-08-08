@@ -19,4 +19,20 @@ public class Cazador extends Jugador {
         return super.habilidadJugador()+ punteriaJugador * fuerzaJugador;
     }
 
+    //4a//
+
+    public Boolean puedeBloquear (Jugador unjugador){
+        return this.lePasaElTrapo(unjugador) ;
+    }
+
+    //3a//
+
+    public Boolean Jugar (){
+        return false;
+    }
+
+    public Boolean intentaMeterGol (){
+        return false;
+    }
+
 }

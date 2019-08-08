@@ -18,4 +18,11 @@ public class Guardian extends Jugador {
     public Double habilidadJugador(){
         return super.habilidadJugador()+ nivelReflejos + fuerzaJugador;
     }
+
+    //4a//
+
+    public Boolean puedeBloquear (Jugador unjugador) {
+        Integer numero = (int) (Math.random() * 3) + 1;
+        return numero == 3 ;
+    }
 }

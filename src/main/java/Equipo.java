@@ -8,6 +8,7 @@ import java.util.Random;
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
+    private List <Pelota> pelotas = new ArrayList <> ();
 
 
 //    public Boolean tieneJugadorEstrella(Equipo equipo){
@@ -41,11 +42,7 @@ public class Equipo {
 
     /**Punto3**/
 
-    public Jugador jugadorRandom() {
-        Random rand = new Random();
-        return this.jugadores.get(rand.nextInt(jugadores.size()));
 
-    }
 
 
 

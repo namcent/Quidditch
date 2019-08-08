@@ -57,6 +57,12 @@ public abstract class Jugador {
     //public Integer valorArbitrario(){
     //    return (int)(Math.random()*10)+1;
     //}
+    //Valor arbitrario hace referencia a la velocidad de las escobas//
+
+
+    //4a//
+
+    public abstract Boolean puedeBloquear(Jugador unjugador) ;
 
     /** Getters **/
 
