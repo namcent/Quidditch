@@ -23,8 +23,8 @@
 hs_err_pid*
 
 Quidditch.iml
-.idea/
-target/
+.idea/*
+target/*
 
 *.DS_Store
 © 2019 GitHub, Inc.
