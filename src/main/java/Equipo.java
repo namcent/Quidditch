@@ -8,6 +8,7 @@ import java.util.Random;
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
+    private Integer puntajeEquipo;
    // private List <Pelota> pelotas = new ArrayList <> ();//
 
 
@@ -38,11 +39,20 @@ public class Equipo {
                 .anyMatch(jugador -> jugador.puedeBloquear(unjugador));
     }
 
+    /**cazador mas rapido**/
+
+    public Jugador cazadorMasRapido (){
+        return jugadores. stream()
+                .filter (jugador -> jugador.
+
+    }
 
 
+    public Integer getPuntajeEquipo() {
+        return puntajeEquipo;
+    }
 
-
-
-
-
+    public void setPuntajeEquipo(Integer puntajeEquipo) {
+        this.puntajeEquipo = puntajeEquipo;
+    }
 }

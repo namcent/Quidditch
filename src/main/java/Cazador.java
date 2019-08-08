@@ -27,12 +27,31 @@ public class Cazador extends Jugador {
 
     //3a//
 
-    //public Boolean Jugar (){
-    //return false;
-    //}
+    public Boolean Jugar (){
+    return false;
+    }
+
+    //return equipo.puedenBloquear(this) ;//
 
     public Boolean intentaMeterGol() {
-        return this
+        if (equipo.puedenBloquear(this )) {
+            this.skillsJugador=skillsJugador-2;
+        finTurno(); //pierde la quaffle, la agarra el cazador mas rapido//
+    } else {
+        if (metioGol()) {
+            this.equipo.setPuntajeEquipo(equipo.getPuntajeEquipo() +10);
+            this.skillsJugador=skillsJugador+5;
+        }
+
+     // como conecto la quaffle con el cazador//
+
+
     }
+
+
+
+
+
+
 }
 
