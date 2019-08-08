@@ -43,6 +43,8 @@ public abstract class Jugador {
         return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>escoba.getValorArbitrario();
     }
 
+    /** Punto 4.a **/
+    public abstract Boolean puedeBloquear(Jugador jugador);
     //private List <Jugador> jugadores = new ArrayList<>();
 
     //public void agregarJugador(Jugador jugador){

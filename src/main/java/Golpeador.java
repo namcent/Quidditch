@@ -18,4 +18,9 @@ public class Golpeador extends Jugador {
     public Double habilidadJugador(){
         return super.habilidadJugador() + punteriaJugador + fuerzaJugador;
     }
+
+    /**Punto 4.a**/
+    public Boolean puedeBloquear(Jugador jugador){
+        return this.esGroso();
+    } //en los del equipo contrario
 }

@@ -18,4 +18,9 @@ public class Buscador extends Jugador {
     public Double habilidadJugador(){
         return super.habilidadJugador() + nivelReflejos * nivelVision;
     }
+
+    /**Punto 4.a**/
+    public Boolean puedeBloquear (Jugador jugador){
+        return false;
+    }
 }

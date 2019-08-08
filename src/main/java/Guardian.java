@@ -1,5 +1,8 @@
 package main.java;
 
+import java.util.List;
+import java.util.Random;
+
 public class Guardian extends Jugador {
     private Integer nivelReflejos;
     private Integer fuerzaJugador;
@@ -18,4 +21,11 @@ public class Guardian extends Jugador {
     public Double habilidadJugador(){
         return super.habilidadJugador()+ nivelReflejos + fuerzaJugador;
     }
+
+    /**Punto 4.a**/
+    public Boolean puedeBloquear (Jugador jugador){
+        Integer numero = (int) (Math.random() * 3) + 1;
+        return numero==3;
+    } //en los del equipo contrario
+
 }
