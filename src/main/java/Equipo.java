@@ -8,7 +8,7 @@ import java.util.Random;
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
-    private List <Pelota> pelotas = new ArrayList <> ();
+   // private List <Pelota> pelotas = new ArrayList <> ();//
 
 
     /** Punto 2.c **/
@@ -30,6 +30,8 @@ public class Equipo {
     }
 
     /**Punto3**/
+
+    //porque el equipo conoce a sus jugadores//
 
     public Boolean puedenBloquear(Jugador unjugador){
         return this.jugadores.stream()
