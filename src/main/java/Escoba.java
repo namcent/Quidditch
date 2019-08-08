@@ -16,9 +16,4 @@ public abstract class Escoba {
 
     public abstract Double velocidadEscoba();
 
-    //package main.java;
-    //
-    //public interface Escoba {
-    //    Double velocidadEscoba();
-    //}
 }

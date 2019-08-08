@@ -40,26 +40,9 @@ public abstract class Jugador {
     }
 
     /** Punto 2.b **/
-    public Boolean esGroso(){
-        return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>escoba.getValorArbitrario();
+    public Boolean esGroso() {
+        return habilidadJugador() > equipo.promedioHabilidadEquipo() && velocidadJugador() > escoba.getValorArbitrario();
     }
-
-    //private List <Jugador> jugadores = new ArrayList<>();
-
-    //public void agregarJugador(Jugador jugador){
-    //    jugadores.add(jugador);
-    //}
-
-//    public Double promedioHabilidadEquipo(List <Jugador> jugadores){
-//        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
-//    }
-
-    //public Integer valorArbitrario(){
-    //    return (int)(Math.random()*10)+1;
-    //}
-    //Valor arbitrario hace referencia a la velocidad de las escobas//
-
-
     //4a//
 
     public abstract Boolean puedeBloquear(Jugador unjugador) ;

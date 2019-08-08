@@ -11,15 +11,6 @@ public class Equipo {
     private List <Pelota> pelotas = new ArrayList <> ();
 
 
-//    public Boolean tieneJugadorEstrella(Equipo equipo){
-//        return this.mejorJugador().lePasaElTrapo(equipo.mejorJugador());
-//    }
-//
-//    public Jugador mejorJugador(){
-//        return this.jugadores.stream()
-//                .max(Comparator.comparing(jugador->jugador.habilidadJugador())).get();
-//    }
-
     /** Punto 2.c **/
     public Boolean tieneJugadorEstrella(Equipo segundoEquipo){
        return jugadores.stream().anyMatch(jugador -> segundoEquipo.lePasaElTrapoATodos(jugador));
@@ -38,9 +29,14 @@ public class Equipo {
         return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum)) / jugadores.size();
     }
 
-
-
     /**Punto3**/
+
+    public Boolean puedenBloquear(Jugador unjugador){
+        return this.jugadores.stream()
+                .anyMatch(jugador -> jugador.puedeBloquear(unjugador));
+    }
+
+
 
 
 
