@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
@@ -32,6 +34,15 @@ public class Equipo {
 
     /**Punto3**/
 
+    //Random//
+    private List<Integer> rango = IntStream.range(1, jugadores.size()).boxed().collect(Collectors.toList());
+
+    public int getRandomElement(List<Integer> list)
+    {
+        Random rand = new Random();
+        return list.get(rand.nextInt(list.size()));
+    }
+
     //porque el equipo conoce a sus jugadores//
 
     public Boolean puedenBloquear(Jugador unjugador){
@@ -41,9 +52,9 @@ public class Equipo {
 
     /**cazador mas rapido**/
 
-    public Jugador cazadorMasRapido (){
+    public Jugador cazadorMasRapido (Equipo otroEquipo){
         return jugadores. stream()
-                .filter (jugador -> jugador.
+                .filter
 
     }
 

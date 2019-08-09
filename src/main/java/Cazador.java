@@ -3,6 +3,7 @@ package main.java;
 public class Cazador extends Jugador {
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
+    public Pelota pelota;
 
     /**
      * Constructor
@@ -27,31 +28,37 @@ public class Cazador extends Jugador {
 
     //3a//
 
-    public Boolean Jugar (){
-    return false;
+    public void perdesLaPelota(Equipo otroEquipo) {
+         return
     }
 
-    //return equipo.puedenBloquear(this) ;//
+    }
+
+    public Boolean Jugar() {
+        if (pelota.tipoPelota().equals("Quaffle")) {
+            return intentaMeterGol();
+        } else {
+             return perdesLaPelota ();
+        }
+    }
+
+
+//return equipo.puedenBloquear(this) ;//
 
     public Boolean intentaMeterGol() {
-        if (equipo.puedenBloquear(this )) {
-            this.skillsJugador=skillsJugador-2;
-        finTurno(); //pierde la quaffle, la agarra el cazador mas rapido//
-    } else {
-        if (metioGol()) {
-            this.equipo.setPuntajeEquipo(equipo.getPuntajeEquipo() +10);
-            this.skillsJugador=skillsJugador+5;
+        if (equipo.puedenBloquear(this)) {
+            this.skillsJugador = skillsJugador - 2;
+            perdesLaPelota(); //pierde la quaffle, la agarra el cazador mas rapido//
+        } else {
+            if (metioGol()) {
+                this.equipo.setPuntajeEquipo(equipo.getPuntajeEquipo() + 10);
+                this.skillsJugador = skillsJugador + 5;
+            }
+
+
         }
-
-     // como conecto la quaffle con el cazador//
-
-
     }
 
 
 
-
-
-
-}
 
