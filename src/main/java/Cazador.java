@@ -20,7 +20,6 @@ public class Cazador extends Jugador {
     }
 
     /** Punto 3 **/
-    //private Boolean tieneQuaffle;
 
     public Boolean jugar(){ //void?
         if (pelota.tipoPelota().equals("Quaffle")){
@@ -66,11 +65,4 @@ public class Cazador extends Jugador {
 
     public Boolean pudoBloquear(Jugador jugador){return finTurno();}
 
-    public Boolean getTieneQuaffle() {
-        return tieneQuaffle;
-    }
-
-    public void setTieneQuaffle(Boolean tieneQuaffle) {
-        this.tieneQuaffle = tieneQuaffle;
-    }
 }
