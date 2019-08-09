@@ -20,7 +20,7 @@ public class Guardian extends Jugador {
 
     public Boolean puedeBloquear (Jugador unjugador) {
         Integer numero = (int) (Math.random() * 3) + 1;
-        return numero == 3 ;
+        return numero.equals(3) ;
     }
 
 

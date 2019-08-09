@@ -26,39 +26,47 @@ public class Cazador extends Jugador {
         return this.lePasaElTrapo(unjugador);
     }
 
-    //3a//
+    /**
+     * 3a
+     **/
+
+    public String tipoJugador(){
+        return "Cazador";
+    }
+
 
     public void perdesLaPelota(Equipo otroEquipo) {
-         return
-    }
+        otroEquipo.cazadorMasRapido();
 
     }
 
-    public Boolean Jugar() {
+    public Boolean metioGol (){
+        Integer gol = (int) (Math.random() * 2) + 1;
+        return gol.equals(2) ;
+    }
+
+
+    public void Jugar(Equipo otroEquipo) {
         if (pelota.tipoPelota().equals("Quaffle")) {
-            return intentaMeterGol();
+            intentaMeterGol(otroEquipo);
         } else {
-             return perdesLaPelota ();
+            perdesLaPelota(otroEquipo);
         }
     }
 
 
-//return equipo.puedenBloquear(this) ;//
-
-    public Boolean intentaMeterGol() {
+    public void intentaMeterGol(Equipo otroEquipo) {
         if (equipo.puedenBloquear(this)) {
             this.skillsJugador = skillsJugador - 2;
-            perdesLaPelota(); //pierde la quaffle, la agarra el cazador mas rapido//
+            perdesLaPelota(otroEquipo);
         } else {
             if (metioGol()) {
                 this.equipo.setPuntajeEquipo(equipo.getPuntajeEquipo() + 10);
                 this.skillsJugador = skillsJugador + 5;
             }
 
-
         }
     }
 
 
-
-
+}

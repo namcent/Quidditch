@@ -1,6 +1,7 @@
 package main.java;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import java.util.Random;
@@ -52,10 +53,17 @@ public class Equipo {
 
     /**cazador mas rapido**/
 
-    public Jugador cazadorMasRapido (Equipo otroEquipo){
-        return jugadores. stream()
-                .filter
 
+    public List<Jugador> listaDeCazadores(){
+        return jugadores.stream()
+                .filter(jugador->jugador.tipoJugador().equals("Cazador"))
+                .collect(Collectors.toList());
+    }
+    //de la lista de cazadores saco el mas rapido//
+
+    public Jugador cazadorMasRapido(){
+        return this.listaDeCazadores().stream()
+                .max(Comparator.comparing(jugador->jugador.velocidadJugador())).get();
     }
 
 

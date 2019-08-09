@@ -57,6 +57,9 @@ public abstract class Jugador {
         return pesoJugador;
     }
 
+    /** Punto 3 **/
+    public abstract String tipoJugador();
+
 
 
 
