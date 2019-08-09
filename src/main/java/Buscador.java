@@ -19,6 +19,11 @@ public class Buscador extends Jugador {
         return super.habilidadJugador() + nivelReflejos * nivelVision;
     }
 
+    /** Punto 3 **/
+    public String tipoJugador(){
+        return "Buscador";
+    }
+
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
         return false;

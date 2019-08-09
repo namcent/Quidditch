@@ -8,6 +8,7 @@ public abstract class Jugador {
     protected Integer pesoJugador;
     public Escoba escoba;
     public Equipo equipo;
+    public Pelota pelota;
 
 
     /** Constructor **/
@@ -42,6 +43,9 @@ public abstract class Jugador {
     public Boolean esGroso(){
         return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>escoba.getValorArbitrario();
     }
+
+    /** Punto 3 **/
+    public abstract String tipoJugador();
 
     /** Punto 4.a **/
     public abstract Boolean puedeBloquear(Jugador jugador);

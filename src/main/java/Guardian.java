@@ -22,6 +22,11 @@ public class Guardian extends Jugador {
         return super.habilidadJugador()+ nivelReflejos + fuerzaJugador;
     }
 
+    /** Punto 3 **/
+    public String tipoJugador(){
+        return "Guardian";
+    }
+
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
         Integer numero = (int) (Math.random() * 3) + 1;

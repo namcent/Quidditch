@@ -20,30 +20,46 @@ public class Cazador extends Jugador {
     }
 
     /** Punto 3 **/
+    //private Boolean tieneQuaffle;
+
     public Boolean jugar(){ //void?
-        if (tieneQuaffle=true){
+        if (pelota.tipoPelota().equals("Quaffle")){
             return intentaMeterGol();
         }else{
             finTurno();
         }
     }
-    private Boolean tieneQuaffle;
-    public Boolean intentaMeterGol(Jugador jugador){
-        this.evitarBloqueos(jugador);
-        if (metioGol()=true){
-            this.equipo.puntajeEquipo = equipo.puntajeEquipo +10;
-            this.skillsJugador=skillsJugador+5;
+
+    public Boolean intentaMeterGol() {
+        if (equipo.puedenBloquear(this)) {
+            this.skillsJugador = skillsJugador - 2;
+            finTurno();
+        } else {
+            if (metioGol() = true) {
+                this.equipo.puntajeEquipo = equipo.puntajeEquipo + 10;
+                this.skillsJugador = skillsJugador + 5;
+            }
         }
     }
-    public Boolean evitarBloqueos(Jugador jugador){
-        if (equipo.puedenBloquear(jugador)){
+    public String tipoJugador(){
+        return "Cazador";
+    }
 
-        }
-        //return !intentaBloquear(equipoContrario);
-        }
+//        public Cazador cazadorRivalMasRapido(){
+//            return filter(jugador -> jugador.get())
+//        }
+
+
+//    public Boolean evitarBloqueos(Jugador jugador){
+//        if (equipo.puedenBloquear(jugador)){
+//            this.skillsJugador=skillsJugador-2;
+//            finTurno();
+//        }
+//        //return !intentaBloquear(equipoContrario);
+//        }
 
     /** Punto 4.a **/
-    public Boolean puedeBloquear (Jugador jugador){
+    public Boolean puedeBloquear(Jugador jugador){
         return this.lePasaElTrapo(jugador);
     } //en los del equipo contrario
     /** Fin **/

@@ -1,6 +1,7 @@
 package main.java;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -53,9 +54,20 @@ public class Equipo {
     }
     /** Fin Random **/
 
-    public Boolean puedenBloquear(Jugador unjugador){
+    public Boolean puedenBloquear(Jugador unJugador){
         return this.jugadores.stream()
-                .anyMatch(jugador -> jugador.puedeBloquear(unjugador));
+                .anyMatch(jugador -> jugador.puedeBloquear(unJugador));
+    }
+    /** Le pasa la Quaffle al cazador rival mas rapido ... **/
+    //hago lista de cazadores
+    public List<Jugador> listaDeCazadores(){
+        return jugadores.stream()
+                .filter(j->j.tipoJugador().equals("Cazador")).collect(Collectors.toList());
+    }
+    //de la lista de cazadores saco el mas rapido
+    public Jugador cazadorMasRapido(){
+        return this.listaDeCazadores().stream()
+                .max(Comparator.comparing(jugador->jugador.velocidadJugador())).get();
     }
 
     }

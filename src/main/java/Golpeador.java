@@ -19,6 +19,10 @@ public class Golpeador extends Jugador {
         return super.habilidadJugador() + punteriaJugador + fuerzaJugador;
     }
 
+    /** Punto 3 **/
+    public String tipoJugador(){
+        return "Golpeador";
+    }
     /**Punto 4.a**/
     public Boolean puedeBloquear(Jugador jugador){
         return this.esGroso();
