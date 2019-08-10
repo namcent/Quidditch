@@ -55,8 +55,9 @@ public class Equipo {
     /** Fin Random **/
 
     public Boolean puedenBloquear(Jugador unJugador){
-        return this.jugadores.stream()
+         Boolean var = this.jugadores.stream()
                 .anyMatch(jugador -> jugador.puedeBloquear(unJugador));
+                return var;
     }
     /** Le pasa la Quaffle al cazador rival mas rapido ... **/
     //hago lista de cazadores

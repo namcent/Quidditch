@@ -23,6 +23,14 @@ public class Golpeador extends Jugador {
     public String tipoJugador(){
         return "Golpeador";
     }
+
+    public void jugar(){
+        elegirBlancoUtil();
+    }
+
+    public Jugador elegirBlancoUtil(){
+
+    }
     /**Punto 4.a**/
     public Boolean puedeBloquear(Jugador jugador){
         return this.esGroso();

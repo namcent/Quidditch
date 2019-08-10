@@ -21,27 +21,38 @@ public class Cazador extends Jugador {
 
     /** Punto 3 **/
 
-    public Boolean jugar(){ //void?
+    public void jugar(Equipo otroEquipo){
         if (pelota.tipoPelota().equals("Quaffle")){
-            return intentaMeterGol();
+            intentaMeterGol(otroEquipo);
         }else{
-            finTurno();
+            finTurno(otroEquipo);
         }
     }
 
-    public Boolean intentaMeterGol() {
+    public void intentaMeterGol(Equipo otroEquipo) {
         if (equipo.puedenBloquear(this)) {
             this.skillsJugador = skillsJugador - 2;
-            finTurno();
+            skillsJugador=skillsJugador+10; //????
+            //yaNoLoBloquean();
+            finTurno(otroEquipo);
         } else {
-            if (metioGol() = true) {
+            if (metioGol()) {
                 this.equipo.puntajeEquipo = equipo.puntajeEquipo + 10;
                 this.skillsJugador = skillsJugador + 5;
             }
         }
     }
+
+    public Boolean metioGol(){
+        Integer gol = (int) (Math.random() * 2) + 1;
+        return gol.equals(2);
+    }
     public String tipoJugador(){
         return "Cazador";
+    }
+
+    public void finTurno(Equipo otroEquipo){
+        otroEquipo.cazadorMasRapido();
     }
 
 //        public Cazador cazadorRivalMasRapido(){
@@ -63,6 +74,6 @@ public class Cazador extends Jugador {
     } //en los del equipo contrario
     /** Fin **/
 
-    public Boolean pudoBloquear(Jugador jugador){return finTurno();}
+    //public Boolean pudoBloquear(Jugador jugador){return finTurno();}
 
 }
