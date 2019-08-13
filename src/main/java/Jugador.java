@@ -21,7 +21,7 @@ public abstract class Jugador {
 
     /** Punto 1.a **/
     public Double nivelManejoDeEscoba(){
-        return skillsJugador/ pesoJugador;
+        return skillsJugador / pesoJugador;
     }
 
     /** Punto 1.b **/
@@ -36,7 +36,7 @@ public abstract class Jugador {
 
     /** Punto 2.a **/
     public Boolean lePasaElTrapo(Jugador jugador){
-        return this.habilidadJugador()>=jugador.habilidadJugador()*2;
+        return this.habilidadJugador() >= (jugador.habilidadJugador()*2);
     }
 
     /** Punto 2.b **/

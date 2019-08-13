@@ -5,4 +5,8 @@ public class Snitch extends Pelota {
 
     // termina el partido//
 
+    public String tipoPelota(){
+        return "Snitch";
+    }
+
 }

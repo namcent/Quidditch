@@ -4,6 +4,10 @@ public class Golpeador extends Jugador {
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
 
+    public String tipoJugador (){
+        return "Golpeador";
+    }
+
     /**Constructor**/
     public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
         super(pesoJugador, skillsJugador, escoba, equipo);

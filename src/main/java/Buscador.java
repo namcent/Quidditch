@@ -15,6 +15,10 @@ public class Buscador extends Jugador {
         //this.pesoJugador = pesoJugador;
     }
 
+    public String tipoJugador () {
+        return "Buscador" ;
+    }
+
     public Double habilidadJugador(){
         return super.habilidadJugador() + nivelReflejos * nivelVision;
     }
@@ -24,6 +28,8 @@ public class Buscador extends Jugador {
     public Boolean puedeBloquear (Jugador unjugador) {
          return false ;
     }
+
+
 
 
 }

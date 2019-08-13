@@ -4,6 +4,10 @@ public class Guardian extends Jugador {
     private Integer nivelReflejos;
     private Integer fuerzaJugador;
 
+    public String tipoJugador () {
+        return "Guardian" ;
+    }
+
     /**Constructor**/
     public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
         super(pesoJugador, skillsJugador, escoba, equipo);
