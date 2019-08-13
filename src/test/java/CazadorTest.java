@@ -30,14 +30,27 @@ public class CazadorTest {
         escoba1= mock(SaetaDeFuego.class);
         escoba2 = mock(Nimbus.class);
         gryffindor = mock(Equipo.class);
-        cazador1 = new Cazador (100, 110, 100.0, 200, escoba1, gryffindor);
-        cazador2 = new Cazador (10, 10, 100.0, 10, escoba1, slytherin);
+        cazador1 = new Cazador (100, 110, 100.0, 200.0, escoba1, gryffindor);
+        cazador2 = new Cazador (10, 10, 100.0, 10.0, escoba1, slytherin);
     }
 
     @Test
+    void manejoDeEscoba (){
+        assertEquals (2, cazador1.nivelManejoDeEscoba()) ;
 
+    }
+
+    @Test
+    void velocidadJugador (){
+        when( escoba1.velocidadEscoba()).thenReturn(100.0);
+        assertEquals(200.0,cazador1.velocidadJugador());
+
+    }
+
+    @Test
     void habilidadJugadorTest (){
-        assertEquals(   , cazador1.habilidadJugador());
+        when (escoba1.velocidadEscoba()).thenReturn(100.0);
+        assertEquals( 11400.0  , cazador1.habilidadJugador());
     }
 
 

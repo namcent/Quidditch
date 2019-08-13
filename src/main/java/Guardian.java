@@ -9,7 +9,7 @@ public class Guardian extends Jugador {
     }
 
     /**Constructor**/
-    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
+    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo){
         super(pesoJugador, skillsJugador, escoba, equipo);
         this.nivelReflejos = nivelReflejos;
         this.fuerzaJugador = fuerzaJugador;

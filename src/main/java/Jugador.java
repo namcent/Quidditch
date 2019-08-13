@@ -5,23 +5,23 @@ import java.util.List;
 
 public abstract class Jugador {
     protected Double skillsJugador;
-    protected Integer pesoJugador;
+    protected Double pesoJugador;
     public Escoba escoba;
     public Equipo equipo;
 
 
 
     /** Constructor **/
-    public Jugador(Double skillsJugador, Integer pesoJugador, Escoba escoba, Equipo equipo){
-        this.skillsJugador=skillsJugador;
+    public Jugador( Double pesoJugador,Double skillsJugador, Escoba escoba, Equipo equipo){
         this.pesoJugador=pesoJugador;
+        this.skillsJugador=skillsJugador;
         this.escoba=escoba;
         this.equipo=equipo;
     }
 
     /** Punto 1.a **/
     public Double nivelManejoDeEscoba(){
-        return skillsJugador / pesoJugador;
+        return (skillsJugador/pesoJugador);
     }
 
     /** Punto 1.b **/
@@ -53,7 +53,7 @@ public abstract class Jugador {
         return skillsJugador;
     }
 
-    public Integer getPesoJugador() {
+    public Double getPesoJugador() {
         return pesoJugador;
     }
 
