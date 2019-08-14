@@ -21,4 +21,7 @@ public abstract class Escoba {
     //public interface Escoba {
     //    Double velocidadEscoba();
     //}
+
+    /**Punto 4.c **/
+    public abstract void recibeGolpe();
 }

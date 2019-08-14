@@ -24,8 +24,8 @@ public class Golpeador extends Jugador {
         return "Golpeador";
     }
 
-    public void jugar(){
-        elegirBlancoUtil();
+    public void jugar(Equipo otroEquipo){
+        elegirBlancoUtil(otroEquipo);
     }
 
     public void elegirBlancoUtil(Equipo otroEquipo){
@@ -41,4 +41,5 @@ public class Golpeador extends Jugador {
     public Boolean puedeBloquear(Jugador jugador){
         return this.esGroso();
     } //en los del equipo contrario
+
 }

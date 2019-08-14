@@ -45,7 +45,11 @@ public abstract class Jugador {
     }
 
     /** Punto 3 **/
+    //public abstract void jugar();
+
     public abstract String tipoJugador();
+
+    public abstract Boolean esBlancoUtil();
 
 
     /** Punto 4.a **/
@@ -63,6 +67,12 @@ public abstract class Jugador {
     //public Integer valorArbitrario(){
     //    return (int)(Math.random()*10)+1;
     //}
+
+    /** Punto 4.c **/
+    public void esGolpeadoPorUnaBludger(){
+        this.skillsJugador=skillsJugador-2;
+        this.escoba.recibeGolpe();
+    }
 
     /** Getters **/
 

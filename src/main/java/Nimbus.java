@@ -31,4 +31,7 @@ public class Nimbus extends Escoba{
 //    public Double actualizacionValorArbitrario(){
 //        return ;
 //    }
+    public void recibeGolpe(){
+        this.porcentajeSaludEscoba=porcentajeSaludEscoba*0.9;
+    }
 }
