@@ -27,6 +27,10 @@ public class Guardian extends Jugador {
         return "Guardian";
     }
 
+    public Boolean esBlancoUtil(){
+        return pelota.tipoPelota().equals("Quaffle");
+    }
+
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
         Integer numero = (int) (Math.random() * 3) + 1;

@@ -5,6 +5,7 @@ public class Buscador extends Jugador {
     private Integer nivelVision;
     private Integer cantTurnosContinuos;
     private Double kmsRecorridos;
+    private Boolean buscandoSnitch = false;
     //private Integer skillsJugador;
     //private Integer pesoJugador;
 
@@ -33,6 +34,7 @@ public class Buscador extends Jugador {
     }
 
     public void buscarSnitch(){
+        buscandoSnitch=true;
         Integer numero = (int) (Math.random() * 1000) + 1;
         if (numero<habilidadJugador()+cantTurnosContinuos){
             perseguirSnitch();
@@ -45,6 +47,10 @@ public class Buscador extends Jugador {
             this.skillsJugador=skillsJugador+10;
             this.equipo.puntajeEquipo=equipo.puntajeEquipo+150;
         }
+    }
+
+    public Boolean esBlancoUtil(){
+        return buscandoSnitch=true || kmsRecorridos<1000;
     }
 
     /**Punto 4.a**/

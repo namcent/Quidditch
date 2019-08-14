@@ -28,9 +28,15 @@ public class Golpeador extends Jugador {
         elegirBlancoUtil();
     }
 
-    public Jugador elegirBlancoUtil(){
+    public void elegirBlancoUtil(Equipo otroEquipo){
+        otroEquipo.jugadorQueJuegaElTurno().esBlancoUtil();
 
+        }
+
+    public Boolean esBlancoUtil(){
+        return false;
     }
+
     /**Punto 4.a**/
     public Boolean puedeBloquear(Jugador jugador){
         return this.esGroso();

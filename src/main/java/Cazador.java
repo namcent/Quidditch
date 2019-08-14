@@ -67,6 +67,9 @@ public class Cazador extends Jugador {
 //        }
 //        //return !intentaBloquear(equipoContrario);
 //        }
+    public Boolean esBlancoUtil(){
+        return pelota.tipoPelota().equals("Quaffle");
+    }
 
     /** Punto 4.a **/
     public Boolean puedeBloquear(Jugador jugador){

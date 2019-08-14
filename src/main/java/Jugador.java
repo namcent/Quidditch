@@ -47,6 +47,7 @@ public abstract class Jugador {
     /** Punto 3 **/
     public abstract String tipoJugador();
 
+
     /** Punto 4.a **/
     public abstract Boolean puedeBloquear(Jugador jugador);
     //private List <Jugador> jugadores = new ArrayList<>();
