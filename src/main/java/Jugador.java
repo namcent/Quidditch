@@ -11,12 +11,14 @@ public abstract class Jugador {
 
 
 
+
     /** Constructor **/
     public Jugador( Double pesoJugador,Double skillsJugador, Escoba escoba, Equipo equipo){
         this.pesoJugador=pesoJugador;
         this.skillsJugador=skillsJugador;
         this.escoba=escoba;
         this.equipo=equipo;
+
     }
 
     /** Punto 1.a **/
@@ -59,6 +61,14 @@ public abstract class Jugador {
 
     /** Punto 3 **/
     public abstract String tipoJugador();
+
+    //public abstract Boolean esBlancoUtil();
+
+    /** Punto 4.c **/
+   // public void esGolpeadoPorUnaBludger(){
+        //this.skillsJugador=skillsJugador-2;
+       // this.escoba.recibeGolpe();
+   // }
 
 
 

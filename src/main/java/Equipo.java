@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
-    private Integer puntajeEquipo;
+    protected Integer puntajeEquipo;
    // private List <Pelota> pelotas = new ArrayList <> ();//
 
 
@@ -44,6 +44,10 @@ public class Equipo {
         return list.get(rand.nextInt(list.size()));
     }
 
+    public Jugador jugadorQueJuegaElTurno(){
+        return jugadores.get(getRandomElement(rango));
+    }
+
     //porque el equipo conoce a sus jugadores//
 
     public Boolean puedenBloquear(Jugador unjugador){
@@ -74,4 +78,6 @@ public class Equipo {
     public void setPuntajeEquipo(Integer puntajeEquipo) {
         this.puntajeEquipo = puntajeEquipo;
     }
+
+
 }
