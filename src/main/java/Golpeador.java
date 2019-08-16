@@ -7,8 +7,8 @@ public class Golpeador extends Jugador {
     //private Integer pesoJugador;
 
     /**Constructor**/
-    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
-        super(pesoJugador, skillsJugador, escoba, equipo);
+    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Integer nivelReflejos, Escoba escoba, Equipo equipo){
+        super(pesoJugador, skillsJugador, nivelReflejos, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
         //this.skillsJugador = skillsJugador;
@@ -33,8 +33,17 @@ public class Golpeador extends Jugador {
             this.loPuedeGolpear();
         }
     }
+
+    //public Boolean puedeGolpearBlanco(){
+    //        return this.punteria>this.blancoUtilElegido.getNivelDeReflejos() || 8>=this.randomNumber();
+    //    }
+
     public void loPuedeGolpear(){
-        this.punteriaJugador> ///nivel reflejos del jugador blanco util
+        Integer numero = (int) (Math.random() * 10) + 1;
+        if (this.punteriaJugador>nivelReflejos || numero>=8){///nivel reflejos del jugador blanco util
+            this.skillsJugador++;
+            esGolpeadoPorUnaBludger();
+        }
     }
 
     public Boolean esBlancoUtil(Equipo miEquipo){

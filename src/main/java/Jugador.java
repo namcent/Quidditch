@@ -6,15 +6,17 @@ import java.util.List;
 public abstract class Jugador {
     protected Double skillsJugador;
     protected Integer pesoJugador;
+    protected Integer nivelReflejos;
     public Escoba escoba;
     public Equipo equipo;
     public Pelota pelota;
 
 
     /** Constructor **/
-    public Jugador(Double skillsJugador, Integer pesoJugador, Escoba escoba, Equipo equipo){
+    public Jugador(Double skillsJugador, Integer pesoJugador, Integer nivelReflejos, Escoba escoba, Equipo equipo){
         this.skillsJugador=skillsJugador;
         this.pesoJugador=pesoJugador;
+        this.nivelReflejos=nivelReflejos;
         this.escoba=escoba;
         this.equipo=equipo;
     }
