@@ -27,19 +27,19 @@ public class Buscador extends Jugador {
         return "Buscador";
     }
 
-    public void jugar(){
+    public void jugar(Equipo otroEquipo){
         cantTurnosContinuos=cantTurnosContinuos+1;
         kmsRecorridos=kmsRecorridos+(this.velocidadJugador()/1/6);
-        buscarSnitch();
+        buscarSnitch(otroEquipo);
     }
 
-    public void buscarSnitch(){
+    public void buscarSnitch(Equipo otroEquipo){
         buscandoSnitch=true;
         Integer numero = (int) (Math.random() * 1000) + 1;
         if (numero<habilidadJugador()+cantTurnosContinuos){
             perseguirSnitch();
         }else{
-            jugar();
+            jugar(otroEquipo);
         }
     }
     public void perseguirSnitch(){
@@ -49,12 +49,18 @@ public class Buscador extends Jugador {
         }
     }
 
-    public Boolean esBlancoUtil(){
+    public Boolean esBlancoUtil(Equipo miEquipo){
         return buscandoSnitch=true || kmsRecorridos<1000;
     }
 
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
         return false;
+    }
+
+    /** Punto 4.c **/
+    public void esGolpeadoPorUnaBludger(Equipo otroEquipo){
+        super.esGolpeadoPorUnaBludger();
+        buscarSnitch(otroEquipo);
     }
 }

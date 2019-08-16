@@ -71,5 +71,10 @@ public class Equipo {
                 .max(Comparator.comparing(jugador->jugador.velocidadJugador())).get();
     }
 
+    /** Punto 4.b **/
+    public Boolean equipoTieneLaQuaffle(){
+        return jugadores.stream().anyMatch(jugador -> jugador.tenesLaQuaffle());
+    }
+
     }
 

@@ -5,8 +5,6 @@ public class SaetaDeFuego extends Escoba {
         return 100.0;
     }
 
-    public void recibeGolpe(){
-
-    }
+    public void recibeGolpe(){}
 
 }

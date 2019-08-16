@@ -29,11 +29,15 @@ public class Golpeador extends Jugador {
     }
 
     public void elegirBlancoUtil(Equipo otroEquipo){
-        otroEquipo.jugadorQueJuegaElTurno().esBlancoUtil();
-
+        if (otroEquipo.jugadorQueJuegaElTurno().esBlancoUtil(equipo)){ //abstract esBlancoUtil pide como parametro si o si miEquipo
+            this.loPuedeGolpear();
         }
+    }
+    public void loPuedeGolpear(){
+        this.punteriaJugador> ///nivel reflejos del jugador blanco util
+    }
 
-    public Boolean esBlancoUtil(){
+    public Boolean esBlancoUtil(Equipo miEquipo){
         return false;
     }
 

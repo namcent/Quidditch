@@ -27,13 +27,11 @@ public class Guardian extends Jugador {
         return "Guardian";
     }
 
-    public Boolean esBlancoUtil(){
-        return pelota.tipoPelota().equals("Quaffle");
+    public Boolean esBlancoUtil(Equipo miEquipo){
+        return !miEquipo.equipoTieneLaQuaffle();
     }
 
-//    public void jugar(){
-//        if puedeBloquear();
-//    }
+    public void jugar(Equipo otroEquipo){} //Tiene que ir si o si, y puede ir vacio
 
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
