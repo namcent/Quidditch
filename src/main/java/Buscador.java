@@ -6,6 +6,7 @@ public class Buscador extends Jugador {
     private Integer cantTurnosContinuos;
     private Double kmsRecorridos;
     private Boolean buscandoSnitch = false;
+
     //private Integer skillsJugador;
     //private Integer pesoJugador;
 
@@ -14,10 +15,9 @@ public class Buscador extends Jugador {
      **/
     public Buscador(Integer nivelReflejos, Integer nivelVision, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
         super(pesoJugador, skillsJugador, escoba, equipo);
-        this.nivelReflejos = nivelReflejos;
         this.nivelVision = nivelVision;
-        //this.skillsJugador = skillsJugador;
-        //this.pesoJugador = pesoJugador;
+
+
     }
 
     public String tipoJugador() {
@@ -52,7 +52,7 @@ public class Buscador extends Jugador {
         }
     }
 
-     public Boolean esBlancoUtil(){
+     public Boolean esBlancoUtil(Equipo miEquipo){
      return buscandoSnitch=true || kmsRecorridos<1000;
      }
 

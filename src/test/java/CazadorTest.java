@@ -1,6 +1,7 @@
 package test.java;
 
 import main.java.*;
+import main.java.Utils.Functions;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
@@ -11,8 +12,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class CazadorTest {
 
@@ -23,17 +23,21 @@ public class CazadorTest {
     private Nimbus escoba2;
     private Equipo slytherin ;
     private Cazador cazador3;
+    private Quaffle quaffle;
+    private Functions functions;
 
     @BeforeEach
     void setUp() {
 
+        functions= mock(Functions.class);
+        quaffle= mock(Quaffle.class);
         slytherin= mock(Equipo.class);
         escoba1= mock(SaetaDeFuego.class);
         escoba2 = mock(Nimbus.class);
         gryffindor = mock(Equipo.class);
-        cazador1 = new Cazador (100, 110, 100.0, 200.0, escoba1, gryffindor);
-        cazador2 = new Cazador (10, 10, 100.0, 10.0, escoba1, slytherin);
-        cazador3= new Cazador (50,80,100., 300.0, escoba1, slytherin) ;
+        cazador1 = new Cazador (10,100, 110, 100.0, 200.0, escoba1, gryffindor, quaffle);
+        cazador2 = new Cazador (5,10, 10, 100.0, 10.0, escoba1, slytherin, quaffle);
+        cazador3= new Cazador (20,50,80,100., 300.0, escoba1, slytherin, quaffle) ;
     }
 
     /**Habilidad cazador**/
@@ -79,23 +83,39 @@ public class CazadorTest {
     /**perdes la pelota**/
     @Test
     void perdesLaPelotaTest () {
-        //como testear voids
+
+        cazador1.perdesLaPelota(slytherin);
+        verify(slytherin).cazadorMasRapido();
+
     }
     /**metio gol**/
-
     @Test
 
     void metioGolTest (){
-        //como testear un random
+        cazador1.setFunctions(functions);
+        when(functions.getRandomElement(any())).thenReturn(2);
+        assertTrue(cazador1.metioGol());
+    }
+
+    /**jugar**/
+
+    @Test
+    void jugarTest(){
+        when(gryffindor.puedenBloquear(cazador1)).thenReturn(true);
+        when(quaffle.tipoPelota()).thenReturn("Quaffle");
+        cazador1.Jugar(slytherin);
+        verify(slytherin).cazadorMasRapido();
     }
 
 
-
-    /**jugar**/
     //void
 
     /** intenta meter gol**/
     //void
+
+    /** es blanco util**/
+
+
 
 
     }

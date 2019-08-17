@@ -16,9 +16,12 @@ public class Equipo {
 
 
     /** Punto 2.c **/
+    //equipo1.tieneUnJugadorEstrella(equipoquenotiene)//
     public Boolean tieneJugadorEstrella(Equipo segundoEquipo){
        return jugadores.stream().anyMatch(jugador -> segundoEquipo.lePasaElTrapoATodos(jugador));
     }
+
+    //equipoquenotiene.lePasaElTrapoATodos (jugadorquepasaatodos)//
 
     public Boolean lePasaElTrapoATodos(Jugador unJugador){
         return jugadores.stream().allMatch(jugador -> unJugador.lePasaElTrapo(jugador));
@@ -70,6 +73,9 @@ public class Equipo {
                 .max(Comparator.comparing(jugador->jugador.velocidadJugador())).get();
     }
 
+    public Boolean equipoTieneLaQuaffle(){
+        return jugadores.stream().anyMatch(jugador -> jugador.tenesLaQuaffle());
+    }
 
     public Integer getPuntajeEquipo() {
         return puntajeEquipo;

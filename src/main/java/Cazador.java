@@ -1,6 +1,13 @@
 package main.java;
 
+import main.java.Utils.Functions;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Cazador extends Jugador {
+    private Functions functions = new Functions ();
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
     public Pelota pelota;
@@ -8,23 +15,17 @@ public class Cazador extends Jugador {
     /**
      * Constructor
      **/
-    public Cazador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
+    public Cazador(Integer nivelReflejo, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo,Pelota pelota) {
         super(pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
+        this.pelota= pelota;
     }
 
     public Double habilidadJugador() {
         return super.habilidadJugador() + punteriaJugador * fuerzaJugador;
     }
 
-    /**
-     * 4a
-     **/
-
-    public Boolean puedeBloquear(Jugador unjugador) {
-        return this.lePasaElTrapo(unjugador);
-    }
 
     /**
      * 3a
@@ -41,7 +42,8 @@ public class Cazador extends Jugador {
     }
 
     public Boolean metioGol (){
-        Integer gol = (int) (Math.random() * 2) + 1;
+        List<Integer> rango = IntStream.rangeClosed(1, 2).boxed().collect(Collectors.toList());
+        Integer gol = functions.getRandomElement(rango);
         return gol.equals(2) ;
     }
 
@@ -68,5 +70,18 @@ public class Cazador extends Jugador {
         }
     }
 
+    public Boolean esBlancoUtil(Equipo miEquipo){
+        return pelota.tipoPelota().equals("Quaffle");
+    }
 
+    /**4a**/
+
+    public Boolean puedeBloquear(Jugador unjugador) {
+        return this.lePasaElTrapo(unjugador);
+    }
+
+
+    public void setFunctions(Functions functions) {
+        this.functions = functions;
+    }
 }

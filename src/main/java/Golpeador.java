@@ -11,7 +11,7 @@ public class Golpeador extends Jugador {
     /**
      * Constructor
      **/
-    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
+    public Golpeador( Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
         super(pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
@@ -21,21 +21,33 @@ public class Golpeador extends Jugador {
         return super.habilidadJugador() + punteriaJugador + fuerzaJugador;
     }
 
+
+
+    public void jugar(Equipo otroEquipo){
+        this.elegirBlancoUtil(otroEquipo);
+    }
+
+    public Boolean esBlancoUtil(Equipo miEquipo){
+
+        return false;
+    }
+
+    public void elegirBlancoUtil(Equipo otroEquipo){
+        otroEquipo.jugadorQueJuegaElTurno().esBlancoUtil(otroEquipo);
+
+    }
+
+
+
     //4a//
 
     public Boolean puedeBloquear(Jugador unjugador) {
         return this.esGroso();
     }
-/**
-    public void jugar() {
-        elegirBlancoUtil();
-    }
 
-    public Jugador elegirBlancoUtil() {
-        return
 
-    }
- **/
+
+
 
 
 

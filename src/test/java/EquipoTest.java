@@ -10,8 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 
 public class EquipoTest {
@@ -21,27 +20,26 @@ public class EquipoTest {
     private Equipo gryffindor;
     private SaetaDeFuego escoba1;
     private Nimbus escoba2;
-    private Equipo slytherin ;
+    private Equipo slytherin;
     private Cazador cazador3;
 
 
     @BeforeEach
     void setUp() {
 
-        slytherin=  new Equipo ();
-        escoba1= mock(SaetaDeFuego.class);
+        slytherin = new Equipo();
+        escoba1 = mock(SaetaDeFuego.class);
         escoba2 = mock(Nimbus.class);
-        gryffindor = new Equipo ();
-        cazador1 = mock (Cazador.class);
+        gryffindor = new Equipo();
+        cazador1 = mock(Cazador.class);
         cazador2 = mock(Cazador.class);
-        cazador3 =mock (Cazador.class) ;
+        cazador3 = mock(Cazador.class);
 
 
     }
 
     @Test
-
-    void lePasaElTrapoATodosTest (){
+    void lePasaElTrapoATodosTest() {
         gryffindor.agregarJugador(cazador1);
         slytherin.agregarJugador(cazador2);
         when(cazador1.habilidadJugador()).thenReturn(800.0);
@@ -50,15 +48,40 @@ public class EquipoTest {
     }
 
     @Test
-
-    void tieneJugadorEstrellaTest (){
+    void tieneJugadorEstrellaTest() {
         gryffindor.agregarJugador(cazador1);
         slytherin.agregarJugador(cazador2);
         when(cazador1.lePasaElTrapo(cazador2)).thenReturn(true);
-        when (slytherin.lePasaElTrapoATodos(cazador1));
-        assertTrue(slytherin.tieneJugadorEstrella(gryffindor));
+        when(slytherin.lePasaElTrapoATodos(cazador1)).thenReturn(true);
+        assertTrue(gryffindor.tieneJugadorEstrella(slytherin));
 
     }
+
+    @Test
+    void agregarJugador() {
+        gryffindor.agregarJugador(cazador1);
+        verify(gryffindor).agregarJugador(eq(cazador1));
+    }
+
+
+
+
+
+    /** promedioHabilidadEquipo**/
+
+    //random//
+
+    //jugadorQueJuegaElTurno//
+
+    /**puedenBloquear**/
+
+    // List<Jugador> listaDeCazadores//
+
+    /**cazadorMasRapido**/
+
+
+
+
 
 
 

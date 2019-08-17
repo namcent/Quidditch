@@ -29,6 +29,10 @@ public class Nimbus extends Escoba{
         return (80 - cantDeAniosDesdeFabricacion()) * getPorcentajeSaludEscoba();
     }
 
+    public void recibeGolpe(){
+        this.porcentajeSaludEscoba=porcentajeSaludEscoba*0.9;
+    }
+
 }
 
 

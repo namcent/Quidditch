@@ -16,4 +16,8 @@ public abstract class Escoba {
 
     public abstract Double velocidadEscoba();
 
+    /**Punto 4.c **/
+    public abstract void recibeGolpe();
 }
+
+

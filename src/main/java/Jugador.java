@@ -8,6 +8,8 @@ public abstract class Jugador {
     protected Double pesoJugador;
     public Escoba escoba;
     public Equipo equipo;
+    protected Integer nivelReflejos;
+    public Pelota pelota;
 
 
 
@@ -18,6 +20,7 @@ public abstract class Jugador {
         this.skillsJugador=skillsJugador;
         this.escoba=escoba;
         this.equipo=equipo;
+        this.nivelReflejos=nivelReflejos;
 
     }
 
@@ -62,7 +65,15 @@ public abstract class Jugador {
     /** Punto 3 **/
     public abstract String tipoJugador();
 
-    //public abstract Boolean esBlancoUtil();
+    public abstract Boolean esBlancoUtil(Equipo miEquipo);
+
+    public Boolean tenesLaQuaffle(){
+        if (this.pelota.tipoPelota().equals("Quaffle")){
+            tieneLaQuaffle=true;
+        }
+        return tieneLaQuaffle;
+    }
+    protected Boolean tieneLaQuaffle=false;
 
     /** Punto 4.c **/
    // public void esGolpeadoPorUnaBludger(){
