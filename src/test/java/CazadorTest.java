@@ -100,22 +100,44 @@ public class CazadorTest {
     /**jugar**/
 
     @Test
-    void jugarTest(){
+    /**opcion no tan feliz**/
+    void jugarNoTanFelizTest(){
         when(gryffindor.puedenBloquear(cazador1)).thenReturn(true);
         when(quaffle.tipoPelota()).thenReturn("Quaffle");
         cazador1.Jugar(slytherin);
         verify(slytherin).cazadorMasRapido();
     }
+    /**opcion feliz**/
+     @Test
+    void jugarOpcionFelizTest(){
+
+     when (gryffindor.puedenBloquear(cazador1)).thenReturn(false);
+     when(quaffle.tipoPelota()).thenReturn("Quaffle");
+     cazador1.Jugar(slytherin);
+     }
+
+     /**intenta meter gol**/
+
+     @Test
+
+    void intetaMeterGol (){
+
+     when(gryffindor.puedenBloquear(cazador1)).thenReturn(true);
+     cazador1.intentaMeterGol(slytherin);
+     verify(slytherin).cazadorMasRapido();
+     }
+
+     /**intenta meter gol pero resultado positivo**/
+
+     /**es blanco util**/
+
+     @Test
+
+    void esBlancoUtil(){
+         when(quaffle.tipoPelota()).thenReturn("Quaffle");
+         assertTrue(cazador1.esBlancoUtil(gryffindor));
+     }
 
 
-    //void
 
-    /** intenta meter gol**/
-    //void
-
-    /** es blanco util**/
-
-
-
-
-    }
+}
