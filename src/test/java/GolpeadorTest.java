@@ -33,12 +33,16 @@ public class GolpeadorTest {
         golpeador3 = new Golpeador (20,50,80,100., 300.0, escoba1, slytherin) ;
     }
 
+    /**habilidadJugador**/
+
     @Test
 
     void habilidadJugadorTest (){
         when(escoba1.velocidadEscoba()).thenReturn(100.0);
         assertEquals(610.0,golpeador1.habilidadJugador());
     }
+
+    /**jugar**/
 
     @Test
     //nullpointer
@@ -51,15 +55,27 @@ public class GolpeadorTest {
 
     }
 
+    /**esBlancoUtil**/
+
     @Test
 
     void esBlancoUtil (){
 
         assertFalse(golpeador1.esBlancoUtil(gryffindor));
-
-
-
     }
+
+    /**elegirBlancoUtil**/
+
+    @Test
+
+    void eleguirBlancoUtil (){
+
+        golpeador1.elegirBlancoUtil(slytherin);
+        verify(slytherin.jugadorQueJuegaElTurno().esBlancoUtil(slytherin));
+    }
+
+
+    /**puedeBloquear**/
 
 
 
