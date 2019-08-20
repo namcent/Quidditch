@@ -1,14 +1,13 @@
 package test.java;
-import main.java.*;
+import main.java.Equipo;
+import main.java.Golpeador;
+import main.java.Nimbus;
+import main.java.SaetaDeFuego;
 import org.junit.jupiter.api.BeforeEach;
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.Mockito.*;
 
 public class GolpeadorTest {
@@ -70,6 +69,8 @@ public class GolpeadorTest {
 
     void eleguirBlancoUtil (){
 
+
+       // when(gryffindor.jugadorQueJuegaElTurno()).thenReturn(golpeador2). Esto no porque golpeador no es mock
         golpeador1.elegirBlancoUtil(slytherin);
         verify(slytherin.jugadorQueJuegaElTurno().esBlancoUtil(slytherin));
     }

@@ -4,23 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Jugador {
-    protected Double skillsJugador;
+    protected Integer nivelReflejos;
     protected Double pesoJugador;
+    protected Double skillsJugador;
     public Escoba escoba;
     public Equipo equipo;
-    protected Integer nivelReflejos;
     public Pelota pelota;
 
 
 
 
     /** Constructor **/
-    public Jugador( Double pesoJugador,Double skillsJugador, Escoba escoba, Equipo equipo){
+    public Jugador( Integer nivelReflejos,Double pesoJugador,Double skillsJugador, Escoba escoba, Equipo equipo){
+        this.nivelReflejos=nivelReflejos;
         this.pesoJugador=pesoJugador;
         this.skillsJugador=skillsJugador;
         this.escoba=escoba;
         this.equipo=equipo;
-        this.nivelReflejos=nivelReflejos;
+
 
     }
 

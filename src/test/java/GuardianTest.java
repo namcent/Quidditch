@@ -24,6 +24,7 @@ public class GuardianTest {
     private Guardian guardian3;
     private Quaffle quaffle;
 
+
     @BeforeEach
     void setUp() {
 
@@ -43,7 +44,9 @@ public class GuardianTest {
     @Test
 
     void habilidadJugadorTest (){
+
         when(escoba1.velocidadEscoba()).thenReturn(100.0);
+
         assertEquals(610.0, guardian1.habilidadJugador());
     }
 

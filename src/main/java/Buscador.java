@@ -1,7 +1,7 @@
 package main.java;
 
 public class Buscador extends Jugador {
-    private Integer nivelReflejos;
+
     private Integer nivelVision;
     private Integer cantTurnosContinuos;
     private Double kmsRecorridos;
@@ -13,8 +13,8 @@ public class Buscador extends Jugador {
     /**
      * Constructor
      **/
-    public Buscador(Integer nivelReflejos, Integer nivelVision, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
-        super(pesoJugador, skillsJugador, escoba, equipo);
+    public Buscador(Integer nivelReflejos, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo,Integer nivelVision) {
+        super( nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.nivelVision = nivelVision;
 
 

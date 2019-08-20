@@ -12,7 +12,7 @@ public class Golpeador extends Jugador {
      * Constructor
      **/
     public Golpeador( Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo) {
-        super(pesoJugador, skillsJugador, escoba, equipo);
+        super(nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
     }

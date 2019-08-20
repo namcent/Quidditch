@@ -1,7 +1,6 @@
 package main.java;
 
 public class Guardian extends Jugador {
-    private Integer nivelReflejos;
     private Integer fuerzaJugador;
     private Pelota pelota ;
 
@@ -11,7 +10,7 @@ public class Guardian extends Jugador {
 
     /**Constructor**/
     public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Double skillsJugador, Escoba escoba, Equipo equipo, Pelota pelota){
-        super(pesoJugador, skillsJugador, escoba, equipo);
+        super(nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.fuerzaJugador = fuerzaJugador;
 
     }
