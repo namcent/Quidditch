@@ -1,14 +1,22 @@
 package main.java;
 
+import main.java.Utils.Functions;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Cazador extends Jugador {
+    private Functions functions = new Functions ();
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
+
     //private Integer skillsJugador;
     //private Integer pesoJugador;
 
     /** Constructor **/
-    public Cazador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Integer nivelReflejos, Escoba escoba, Equipo equipo){
-        super(pesoJugador, skillsJugador, nivelReflejos, escoba, equipo);
+    public Cazador( Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
+        super(nivelReflejos ,pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
         //this.skillsJugador = skillsJugador;
@@ -54,7 +62,8 @@ public class Cazador extends Jugador {
     }
 
     public Boolean metioGol(){
-        Integer gol = (int) (Math.random() * 2) + 1;
+        List<Integer> rango = IntStream.rangeClosed(1, 2).boxed().collect(Collectors.toList());
+        Integer gol = functions.getRandomElement(rango);
         return gol.equals(2);
     }
     public String tipoJugador(){

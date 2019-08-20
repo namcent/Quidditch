@@ -10,7 +10,7 @@ public class Buscador extends Jugador {
 
     /**Constructor**/
     public Buscador(Integer nivelReflejos, Integer nivelVision, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
-        super(pesoJugador, skillsJugador, nivelReflejos, escoba, equipo);
+        super(nivelReflejos ,pesoJugador, skillsJugador, escoba, equipo);
         this.nivelVision = nivelVision;
         //this.skillsJugador = skillsJugador;
         //this.pesoJugador = pesoJugador;

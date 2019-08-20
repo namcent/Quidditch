@@ -13,7 +13,7 @@ public abstract class Jugador {
 
 
     /** Constructor **/
-    public Jugador(Double skillsJugador, Integer pesoJugador, Integer nivelReflejos, Escoba escoba, Equipo equipo){
+    public Jugador(Integer nivelReflejos, Double skillsJugador, Integer pesoJugador, Escoba escoba, Equipo equipo){
         this.skillsJugador=skillsJugador;
         this.pesoJugador=pesoJugador;
         this.nivelReflejos=nivelReflejos;

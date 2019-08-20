@@ -5,12 +5,13 @@ import java.util.Random;
 
 public class Guardian extends Jugador {
     private Integer fuerzaJugador;
+    private Pelota pelota;
     //private Integer skillsJugador;
     //private Integer pesoJugador;
 
     /**Constructor**/
-    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
-        super(pesoJugador, skillsJugador, nivelReflejos, escoba, equipo);
+    public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo, Pelota pelota){
+        super(nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.fuerzaJugador = fuerzaJugador;
         //this.skillsJugador = skillsJugador;
         //this.pesoJugador = pesoJugador;

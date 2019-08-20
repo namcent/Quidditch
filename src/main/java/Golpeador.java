@@ -7,8 +7,8 @@ public class Golpeador extends Jugador {
     //private Integer pesoJugador;
 
     /**Constructor**/
-    public Golpeador(Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Integer nivelReflejos, Escoba escoba, Equipo equipo){
-        super(pesoJugador, skillsJugador, nivelReflejos, escoba, equipo);
+    public Golpeador(Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
+        super(nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
         //this.skillsJugador = skillsJugador;
@@ -25,7 +25,7 @@ public class Golpeador extends Jugador {
     }
 
     public void jugar(Equipo otroEquipo){
-        elegirBlancoUtil(otroEquipo);
+        this.elegirBlancoUtil(otroEquipo);
     }
 
     public void elegirBlancoUtil(Equipo otroEquipo){
