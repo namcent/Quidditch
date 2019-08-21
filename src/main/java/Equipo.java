@@ -6,9 +6,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import main.java.Utils.Functions;
 
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
+    private Functions functions = new Functions ();
     public String nombre;
     public Integer puntajeEquipo;
 
@@ -41,17 +43,11 @@ public class Equipo {
 
     /** Punto 3 **/
     /** Inicio Random **/
-    private List<Integer> rango = IntStream.range(1, jugadores.size()).boxed().collect(Collectors.toList());
-
-    public int getRandomElement(List<Integer> list)
-    {
-        Random rand = new Random();
-        return list.get(rand.nextInt(list.size()));
-    }
-
     public Jugador jugadorQueJuegaElTurno(){
-        return jugadores.get(getRandomElement(rango));
+        List<Integer> rango = IntStream.range(1, jugadores.size()).boxed().collect(Collectors.toList());
+        return jugadores.get(functions.getRandomElement(rango));
     }
+
     /** Fin Random **/
 
     public Boolean puedenBloquear(Jugador unJugador){

@@ -35,6 +35,9 @@ public class Golpeador extends Jugador {
     }
 
     public void elegirBlancoUtil(Equipo otroEquipo){
+        //List<Integer> rango = IntStream.range(1, otroEquipo.size()).boxed().collect(Collectors.toList()); //jugadores.size()
+        //        if (jugadores.get(functions.getRandomElement(rango)).esBlancoUtil(equipo)){
+        //?
         if (otroEquipo.jugadorQueJuegaElTurno().esBlancoUtil(equipo)){ //abstract esBlancoUtil pide como parametro si o si miEquipo
             this.loPuedeGolpear();
         }
