@@ -1,9 +1,14 @@
 package main.java;
 
+import main.java.Utils.Functions;
+
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Guardian extends Jugador {
+    private Functions functions = new Functions ();
     private Integer fuerzaJugador;
     private Pelota pelota;
     //private Integer skillsJugador;
@@ -34,7 +39,8 @@ public class Guardian extends Jugador {
 
     /**Punto 4.a**/
     public Boolean puedeBloquear (Jugador jugador){
-        Integer numero = (int) (Math.random() * 3) + 1;
+        List<Integer> rango = IntStream.rangeClosed(1, 3).boxed().collect(Collectors.toList());
+        Integer numero = functions.getRandomElement(rango);
         return numero.equals(3);
     } //en los del equipo contrario
 

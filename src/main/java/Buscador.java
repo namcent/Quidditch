@@ -1,6 +1,13 @@
 package main.java;
 
+import main.java.Utils.Functions;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Buscador extends Jugador {
+    private Functions functions = new Functions ();
     private Integer nivelVision;
     private Integer cantTurnosContinuos;
     private Double kmsRecorridos;
@@ -33,7 +40,8 @@ public class Buscador extends Jugador {
 
     public void buscarSnitch(Equipo otroEquipo){
         buscandoSnitch=true;
-        Integer numero = (int) (Math.random() * 1000) + 1;
+        List<Integer> rango = IntStream.rangeClosed(1, 1000).boxed().collect(Collectors.toList());
+        Integer numero = functions.getRandomElement(rango);
         if (numero<habilidadJugador()+cantTurnosContinuos){
             perseguirSnitch();
         }else{

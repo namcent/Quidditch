@@ -1,6 +1,12 @@
 package main.java;
 
+import main.java.Utils.Functions;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Golpeador extends Jugador {
+    private Functions functions = new Functions ();
     private Integer punteriaJugador;
     private Integer fuerzaJugador;
     //private Integer skillsJugador;
@@ -39,7 +45,8 @@ public class Golpeador extends Jugador {
     //    }
 
     public void loPuedeGolpear(){
-        Integer numero = (int) (Math.random() * 10) + 1;
+        List<Integer> rango = IntStream.rangeClosed(1, 10).boxed().collect(Collectors.toList());
+        Integer numero = functions.getRandomElement(rango);
         if (this.punteriaJugador>nivelReflejos || numero>=8){///nivel reflejos del jugador blanco util
             this.skillsJugador++;
             esGolpeadoPorUnaBludger();
