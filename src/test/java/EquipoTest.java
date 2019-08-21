@@ -1,16 +1,14 @@
 package test.java;
-import main.java.*;
+import main.java.Cazador;
+import main.java.Equipo;
+import main.java.Nimbus;
+import main.java.SaetaDeFuego;
 import org.junit.jupiter.api.BeforeEach;
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 public class EquipoTest {
@@ -57,15 +55,6 @@ public class EquipoTest {
 
     }
 
-    @Test
-    void agregarJugador() {
-        gryffindor.agregarJugador(cazador1);
-        verify(gryffindor).agregarJugador(eq(cazador1));
-    }
-
-
-
-
 
     /** promedioHabilidadEquipo**/
 
@@ -80,14 +69,12 @@ public class EquipoTest {
     /**cazadorMasRapido**/
 
 
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
