@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Buscador extends Jugador {
 
@@ -5,9 +8,8 @@ public class Buscador extends Jugador {
     private Integer cantTurnosContinuos;
     private Double kmsRecorridos;
     private Boolean buscandoSnitch = false;
+    private main.java.Utils.Functions functions = new main.java.Utils.Functions();
 
-    //private Integer skillsJugador;
-    //private Integer pesoJugador;
 
     /**
      * Constructor
@@ -32,15 +34,18 @@ public class Buscador extends Jugador {
 
     public void jugar(){
         cantTurnosContinuos=cantTurnosContinuos+1;
-        setKmsRecorridos(getKmsRecorridos() +(this.velocidadJugador()/1/6));
+        setKmsRecorridos(getKmsRecorridos() + (this.velocidadJugador()/1/6));
         buscarSnitch();
     }
 
     public void buscarSnitch(){
-        Integer numero = (int) (Math.random() * 1000) + 1;
+        buscandoSnitch=true;
+        List<Integer> rango = IntStream.rangeClosed(1, 1000).boxed().collect(Collectors.toList());
+        Integer numero = functions.getRandomElement(rango);
         if (numero<habilidadJugador()+cantTurnosContinuos){
             perseguirSnitch();
         }else{
+
             jugar();
         }
     }

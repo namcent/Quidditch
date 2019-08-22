@@ -2,8 +2,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class GolpeadorTest {
@@ -70,11 +69,18 @@ public class GolpeadorTest {
     }
 
 
-    /**puedeBloquear**/
+    /**puedeBloquear
 
+    @Test
+    void puedeBloquearTest(){
 
-
-
+        when(slytherin.promedioHabilidadEquipo()).thenReturn(10.0);
+        when(escoba1.getValorArbitrario()).thenReturn(50.0);
+        golpeador1.habilidadJugador().equals(100.0);
+        golpeador1.velocidadJugador().equals(100.0);
+        golpeador1.esGroso();
+        assertTrue (golpeador1.puedeBloquear(golpeador2));
+    }**/
 
 
 

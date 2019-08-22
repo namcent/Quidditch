@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -14,6 +13,7 @@ public class BuscadorTest {
     private Nimbus escoba2;
     private Equipo slytherin;
     private Quaffle quaffle;
+    private main.java.Utils.Functions functions;
 
     @BeforeEach
     void setUp() {
@@ -26,6 +26,7 @@ public class BuscadorTest {
         buscador1= new Buscador (10,100.0,200.0,escoba1,gryffindor,1);
         buscador2= new Buscador(10,10.0,10.0,escoba1,slytherin, 1);
         quaffle = mock (Quaffle.class);
+        functions= mock (main.java.Utils.Functions.class);
 
     }
 
@@ -71,6 +72,9 @@ public class BuscadorTest {
 
     @Test
     void esBlancoUtilTest (){
+
+        assertTrue(buscador1.)
+
 
     }
 
