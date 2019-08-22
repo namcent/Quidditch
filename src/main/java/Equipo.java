@@ -3,10 +3,12 @@ package main.java;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
+//import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import main.java.Utils.Functions;
+import main.java.exceptions.EquipoCompletoException;
+import main.java.exceptions.EquipoVacioException;
 
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
@@ -16,7 +18,17 @@ public class Equipo {
 
 
     public void agregarJugador(Jugador jugador){
+        if(this.cantDeJugadoresEnEquipo()==7){
+            throw new EquipoCompletoException("El equipo esta completo");
+        }
         jugadores.add(jugador);
+    }
+
+    public Integer cantDeJugadoresEnEquipo(){
+        if(jugadores.isEmpty()) {
+            throw new EquipoVacioException("El equipo esta vacio");
+        }
+        return jugadores.size();
     }
 
     public Double promedioHabilidadEquipo(){

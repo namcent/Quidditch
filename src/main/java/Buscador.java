@@ -56,7 +56,7 @@ public class Buscador extends Jugador {
     }
 
     public Boolean esBlancoUtil(Equipo miEquipo){
-        return buscandoSnitch=true || kmsRecorridos<1000;
+        return buscandoSnitch=true || kmsRecorridos>=4000;
     }
 
     /**Punto 4.a**/
