@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/BludgerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/QuaffleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SnitchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Buscador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Buscador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Equipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Golpeador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Golpeador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BuscadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BuscadorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GolpeadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GolpeadorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
