@@ -1,4 +1,3 @@
-package main.java;
 
 public class Golpeador extends Jugador {
     private Integer punteriaJugador;
@@ -43,7 +42,9 @@ public class Golpeador extends Jugador {
 
     public Boolean puedeBloquear(Jugador unjugador) {
         return this.esGroso();
-    }
+    }char
+
+
 
 
 

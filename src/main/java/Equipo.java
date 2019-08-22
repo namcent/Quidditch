@@ -1,4 +1,3 @@
-package main.java;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,35 +10,35 @@ import java.util.stream.IntStream;
 public class Equipo {
     private List<Jugador> jugadores = new ArrayList<>();
     public String nombre;
-    protected Integer puntajeEquipo;
+    protected Integer puntajeEquipo = 0;
    // private List <Pelota> pelotas = new ArrayList <> ();//
 
 
     /** Punto 2.c **/
     //equipo1.tieneUnJugadorEstrella(equipoquenotiene)//
     public Boolean tieneJugadorEstrella(Equipo segundoEquipo){
-       return jugadores.stream().anyMatch(jugador -> segundoEquipo.lePasaElTrapoATodos(jugador));
+       return getJugadores().stream().anyMatch(jugador -> segundoEquipo.lePasaElTrapoATodos(jugador));
     }
 
     //equipoquenotiene.lePasaElTrapoATodos (jugadorquepasaatodos)//
 
     public Boolean lePasaElTrapoATodos(Jugador unJugador){
-        return jugadores.stream().allMatch(jugador -> unJugador.lePasaElTrapo(jugador));
+        return getJugadores().stream().allMatch(jugador -> unJugador.lePasaElTrapo(jugador));
     }
 
 
     public void agregarJugador(Jugador jugador) {
-        jugadores.add(jugador);
+        getJugadores().add(jugador);
     }
 
     public Double promedioHabilidadEquipo() {
-        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum)) / jugadores.size();
+        return (getJugadores().stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum)) / getJugadores().size();
     }
 
     /**Punto3**/
 
     //Random//
-    private List<Integer> rango = IntStream.range(1, jugadores.size()).boxed().collect(Collectors.toList());
+    private List<Integer> rango = IntStream.range(1, getJugadores().size()).boxed().collect(Collectors.toList());
 
     public int getRandomElement(List<Integer> list)
     {
@@ -48,13 +47,13 @@ public class Equipo {
     }
 
     public Jugador jugadorQueJuegaElTurno(){
-        return jugadores.get(getRandomElement(rango));
+        return getJugadores().get(getRandomElement(rango));
     }
 
     //porque el equipo conoce a sus jugadores//
 
     public Boolean puedenBloquear(Jugador unjugador){
-        return this.jugadores.stream()
+        return this.getJugadores().stream()
                 .anyMatch(jugador -> jugador.puedeBloquear(unjugador));
     }
 
@@ -62,7 +61,7 @@ public class Equipo {
 
 
     public List<Jugador> listaDeCazadores(){
-        return jugadores.stream()
+        return getJugadores().stream()
                 .filter(jugador->jugador.tipoJugador().equals("Cazador"))
                 .collect(Collectors.toList());
     }
@@ -74,7 +73,7 @@ public class Equipo {
     }
 
     public Boolean equipoTieneLaQuaffle(){
-        return jugadores.stream().anyMatch(jugador -> jugador.tenesLaQuaffle());
+        return getJugadores().stream().anyMatch(jugador -> jugador.tenesLaQuaffle());
     }
 
     public Integer getPuntajeEquipo() {
@@ -86,4 +85,11 @@ public class Equipo {
     }
 
 
+    public List<Jugador> getJugadores() {
+        return jugadores;
+    }
+
+    public void setJugadores(List<Jugador> jugadores) {
+        this.jugadores = jugadores;
+    }
 }

@@ -1,4 +1,3 @@
-package main.java;
 
 public class Guardian extends Jugador {
     private Integer fuerzaJugador;

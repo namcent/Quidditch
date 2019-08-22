@@ -1,8 +1,3 @@
-package test.java;
-import main.java.Cazador;
-import main.java.Equipo;
-import main.java.Nimbus;
-import main.java.SaetaDeFuego;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -58,6 +53,13 @@ public class EquipoTest {
 
     /** promedioHabilidadEquipo**/
 
+    @Test
+    void promedioHabilidadEquipo(){
+        //mock (arrayList<Jufgador>)
+        //arraylist (mock <jugador>)
+        //no pruebo la lista si no el metodo, hago un assert equals del promedio del equipo, tengo que sacarlo yo a mano)
+    }
+
     //random//
 
     //jugadorQueJuegaElTurno//
@@ -67,6 +69,8 @@ public class EquipoTest {
     // List<Jugador> listaDeCazadores//
 
     /**cazadorMasRapido**/
+
+
 
 
 }

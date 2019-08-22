@@ -1,8 +1,4 @@
-package test.java;
-import main.java.Equipo;
-import main.java.Golpeador;
-import main.java.Nimbus;
-import main.java.SaetaDeFuego;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -47,13 +43,11 @@ public class GolpeadorTest {
     //nullpointer
 
     void jugarTest (){
-
-
+        when(slytherin.jugadorQueJuegaElTurno()).thenReturn(golpeador2);
         golpeador1.jugar(slytherin);
-        verify(golpeador1).elegirBlancoUtil(slytherin);
 
-    }
-
+        verify(slytherin).jugadorQueJuegaElTurno();
+}
     /**esBlancoUtil**/
 
     @Test
@@ -69,10 +63,10 @@ public class GolpeadorTest {
 
     void eleguirBlancoUtil (){
 
-
+        when(slytherin.jugadorQueJuegaElTurno()).thenReturn(golpeador2);
        // when(gryffindor.jugadorQueJuegaElTurno()).thenReturn(golpeador2). Esto no porque golpeador no es mock
         golpeador1.elegirBlancoUtil(slytherin);
-        verify(slytherin.jugadorQueJuegaElTurno().esBlancoUtil(slytherin));
+        verify(slytherin).jugadorQueJuegaElTurno();
     }
 
 

@@ -1,6 +1,3 @@
-package test.java;
-
-import main.java.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -61,8 +58,14 @@ public class BuscadorTest {
     //es void
 
     /**perseguir snitch**/
+  @Test
 
-    //es void
+  void perseguirSnitchTest(){
+      buscador1.setKmsRecorridos(5000.0);
+      buscador1.perseguirSnitch();
+      assertEquals(210.0, buscador1.skillsJugador);
+      //no pruebo parte del equipo porque no tendria que ser mock//
+   }
 
     /**esBlancoUtil Test**/
 

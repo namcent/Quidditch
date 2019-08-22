@@ -1,4 +1,3 @@
-package main.java;
 
 public class Buscador extends Jugador {
 
@@ -33,7 +32,7 @@ public class Buscador extends Jugador {
 
     public void jugar(){
         cantTurnosContinuos=cantTurnosContinuos+1;
-        kmsRecorridos=kmsRecorridos+(this.velocidadJugador()/1/6);
+        setKmsRecorridos(getKmsRecorridos() +(this.velocidadJugador()/1/6));
         buscarSnitch();
     }
 
@@ -46,14 +45,15 @@ public class Buscador extends Jugador {
         }
     }
     public void perseguirSnitch(){
-        if (kmsRecorridos == 5000){
+        if (getKmsRecorridos() == 5000){
             this.skillsJugador=skillsJugador+10;
-            this.equipo.puntajeEquipo=equipo.puntajeEquipo+150;
+            this.equipo.setPuntajeEquipo(this.equipo.getPuntajeEquipo()+150);
+
         }
     }
 
      public Boolean esBlancoUtil(Equipo miEquipo){
-     return buscandoSnitch=true || kmsRecorridos<1000;
+     return buscandoSnitch=true || getKmsRecorridos() <1000;
      }
 
     //4a//
@@ -63,5 +63,11 @@ public class Buscador extends Jugador {
     }
 
 
+    public Double getKmsRecorridos() {
+        return kmsRecorridos;
+    }
 
+    public void setKmsRecorridos(Double kmsRecorridos) {
+        this.kmsRecorridos = kmsRecorridos;
+    }
 }

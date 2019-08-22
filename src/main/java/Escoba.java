@@ -1,5 +1,3 @@
-package main.java;
-
 public abstract class Escoba {
 
     //valor que hace refenrecia a la velocidad de las escobas y su actualizacion//

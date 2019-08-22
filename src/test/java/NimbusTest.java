@@ -1,12 +1,7 @@
-package test.java;
-
-import main.java.Nimbus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 public class NimbusTest {
 
@@ -46,10 +41,9 @@ public class NimbusTest {
 
    @Test
     void recibeGolpeTest (){
-
-       //como hago el verify sin mockito
-
        escobaA.recibeGolpe();
+       assertEquals(45, escobaA.porcentajeSaludEscoba);
+
 
    }
 

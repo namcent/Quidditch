@@ -1,4 +1,3 @@
-package main.java;
 
 public class SaetaDeFuego extends Escoba {
     public Double velocidadEscoba(){
