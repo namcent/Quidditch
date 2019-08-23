@@ -34,8 +34,8 @@ public class CazadorTest {
         escoba2 = mock(Nimbus.class);
         gryffindor = mock(Equipo.class);
         cazador1 = new Cazador (10,100, 110, 100.0, 200, escoba1, gryffindor, quaffle);
-        cazador2 = new Cazador (5,10, 10, 100.0, 10.0, escoba1, slytherin, quaffle);
-        cazador3= new Cazador (20,50,80,100., 300.0, escoba1, slytherin, quaffle) ;
+        cazador2 = new Cazador (5,10, 10, 100.0, 10, escoba1, slytherin, quaffle);
+        cazador3= new Cazador (20,50,80,100., 300, escoba1, slytherin, quaffle) ;
     }
 
     /**Habilidad cazador**/
@@ -82,7 +82,7 @@ public class CazadorTest {
     @Test
     void perdesLaPelotaTest () {
 
-        cazador1.perdesLaPelota(slytherin);
+        cazador1.finTurno(slytherin);
         verify(slytherin).cazadorMasRapido();
 
     }
@@ -102,7 +102,7 @@ public class CazadorTest {
     void jugarNoTanFelizTest(){
         when(gryffindor.puedenBloquear(cazador1)).thenReturn(true);
         when(quaffle.tipoPelota()).thenReturn("Quaffle");
-        cazador1.Jugar(slytherin);
+        cazador1.jugar(slytherin);
         verify(slytherin).cazadorMasRapido();
     }
     /**opcion feliz**/
@@ -111,7 +111,7 @@ public class CazadorTest {
 
         when (gryffindor.puedenBloquear(cazador1)).thenReturn(false);
         when(quaffle.tipoPelota()).thenReturn("Quaffle");
-        cazador1.Jugar(slytherin);
+        cazador1.jugar(slytherin);
     }
 
     /**intenta meter gol**/

@@ -3,7 +3,7 @@ package main.java;
 import main.java.Utils.Functions;
 
 import java.util.List;
-import java.util.Random;
+//import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -18,6 +18,7 @@ public class Guardian extends Jugador {
     public Guardian(Integer nivelReflejos, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo, Pelota pelota){
         super(nivelReflejos, pesoJugador, skillsJugador, escoba, equipo);
         this.fuerzaJugador = fuerzaJugador;
+        this.pelota = pelota;
         //this.skillsJugador = skillsJugador;
         //this.pesoJugador = pesoJugador;
     }

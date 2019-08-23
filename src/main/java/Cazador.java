@@ -15,10 +15,11 @@ public class Cazador extends Jugador {
     //private Integer pesoJugador;
 
     /** Constructor **/
-    public Cazador( Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo){
+    public Cazador( Integer nivelReflejos, Integer punteriaJugador, Integer fuerzaJugador, Double pesoJugador, Integer skillsJugador, Escoba escoba, Equipo equipo, Pelota pelota){
         super(nivelReflejos ,pesoJugador, skillsJugador, escoba, equipo);
         this.punteriaJugador = punteriaJugador;
         this.fuerzaJugador = fuerzaJugador;
+        this.pelota=pelota;
         //this.skillsJugador = skillsJugador;
         //this.pesoJugador = pesoJugador;
     }

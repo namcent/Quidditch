@@ -27,9 +27,9 @@ public class GolpeadorTest {
         escoba1= mock(SaetaDeFuego.class);
         escoba2 = mock(Nimbus.class);
         gryffindor = mock(Equipo.class);
-        golpeador1 = new Golpeador (10,100, 110, 100.0, 200.0, escoba1, gryffindor);
-        golpeador2 = new Golpeador  (10,10, 10, 100.0, 10.0, escoba1, slytherin);
-        golpeador3 = new Golpeador (20,50,80,100., 300.0, escoba1, slytherin) ;
+        golpeador1 = new Golpeador (10,100, 110, 100.0, 200, escoba1, gryffindor);
+        golpeador2 = new Golpeador  (10,10, 10, 100.0, 10, escoba1, slytherin);
+        golpeador3 = new Golpeador (20,50,80,100., 300, escoba1, slytherin) ;
     }
 
     /**habilidadJugador**/

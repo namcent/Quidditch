@@ -41,18 +41,18 @@ public class JugadorTest {
 
 
         harrypotter = new Buscador(10, 5, 75.0, 5, escoba1, griffindor);
-        jugador1= new Cazador(10,15, 10,45.0,16, escoba1, griffindor);
+        jugador1= new Cazador(10,15, 10,45.0,16, escoba1, griffindor, quaffle);
         jugador2=new Guardian(15,10, 75.0, 15, escoba2, griffindor, quaffle);
-        jugador3=new Cazador(20,15, 16, 80.0, 15, escoba2, griffindor);
-        jugador4= new Cazador(16,16, 60, 90.0, 24, escoba2, griffindor);
+        jugador3=new Cazador(20,15, 16, 80.0, 15, escoba2, griffindor, quaffle);
+        jugador4= new Cazador(16,16, 60, 90.0, 24, escoba2, griffindor, quaffle);
         jugador5=new Golpeador(5, 64, 75, 85.0, 54, escoba1, griffindor);
         jugador6=new Golpeador(25,15, 16, 80.0, 15, escoba2, griffindor);
 
         jugadorcontr1=new Buscador(15, 16, 80.0, 15, escoba2, slytherin);
-        jugadorcontr2= new Cazador(16, 60, 15, 90.0, 20, escoba2, slytherin);
+        jugadorcontr2= new Cazador(16, 60, 15, 90.0, 20, escoba2, slytherin, quaffle);
         jugadorcontr3=new Guardian(64, 75, 85.0, 54, escoba1, slytherin, quaffle);
-        jugadorcontr4=new Cazador(15, 16, 20, 80.0, 15, escoba2, slytherin);
-        jugadorcontr5= new Cazador(16, 60, 24, 90.0, 8, escoba2, slytherin);
+        jugadorcontr4=new Cazador(15, 16, 20, 80.0, 15, escoba2, slytherin, quaffle);
+        jugadorcontr5= new Cazador(16, 60, 24, 90.0, 8, escoba2, slytherin, quaffle);
         jugadorcontr6=new Golpeador(64, 75, 14, 85.0, 19, escoba1, slytherin);
         jugadorcontr7=new Golpeador(15, 16, 19, 80.0, 7, escoba2, slytherin);
 

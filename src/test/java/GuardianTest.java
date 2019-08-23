@@ -33,9 +33,9 @@ public class GuardianTest {
         escoba1 = mock(SaetaDeFuego.class);
         escoba2 = mock(Nimbus.class);
         gryffindor = mock(Equipo.class);
-        guardian1 = new Guardian(100, 110, 100.0, 200.0, escoba1, gryffindor, quaffle);
-        guardian2 = new Guardian(10, 10, 100.0, 10.0, escoba1, slytherin, quaffle);
-        guardian3 = new Guardian(50, 80, 100., 300.0, escoba1, slytherin, quaffle);
+        guardian1 = new Guardian(100, 110, 100.0, 200, escoba1, gryffindor, quaffle);
+        guardian2 = new Guardian(10, 10, 100.0, 10, escoba1, slytherin, quaffle);
+        guardian3 = new Guardian(50, 80, 100., 300, escoba1, slytherin, quaffle);
         quaffle = mock (Quaffle.class);
 
     }
