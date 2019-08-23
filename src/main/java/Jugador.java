@@ -1,26 +1,32 @@
-package main.java;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Jugador {
+    protected Integer nivelReflejos;
+    protected Double pesoJugador;
     protected Double skillsJugador;
-    protected Integer pesoJugador;
     public Escoba escoba;
     public Equipo equipo;
+    public Pelota pelota;
+
+
 
 
     /** Constructor **/
-    public Jugador(Double skillsJugador, Integer pesoJugador, Escoba escoba, Equipo equipo){
-        this.skillsJugador=skillsJugador;
+    public Jugador( Integer nivelReflejos,Double pesoJugador,Double skillsJugador, Escoba escoba, Equipo equipo){
+        this.nivelReflejos=nivelReflejos;
         this.pesoJugador=pesoJugador;
+        this.skillsJugador=skillsJugador;
         this.escoba=escoba;
         this.equipo=equipo;
+
+
     }
 
     /** Punto 1.a **/
     public Double nivelManejoDeEscoba(){
-        return skillsJugador/ pesoJugador;
+        return (skillsJugador/pesoJugador);
     }
 
     /** Punto 1.b **/
@@ -35,27 +41,16 @@ public abstract class Jugador {
 
     /** Punto 2.a **/
     public Boolean lePasaElTrapo(Jugador jugador){
-        return this.habilidadJugador()>=jugador.habilidadJugador()*2;
+        return this.habilidadJugador() >= (jugador.habilidadJugador()*2);
     }
 
     /** Punto 2.b **/
-    public Boolean esGroso(){
-        return habilidadJugador()>equipo.promedioHabilidadEquipo() && velocidadJugador()>escoba.getValorArbitrario();
+    public Boolean esGroso() {
+        return habilidadJugador() > equipo.promedioHabilidadEquipo() && velocidadJugador() > escoba.getValorArbitrario();
     }
+    //4a//
 
-    //private List <Jugador> jugadores = new ArrayList<>();
-
-    //public void agregarJugador(Jugador jugador){
-    //    jugadores.add(jugador);
-    //}
-
-//    public Double promedioHabilidadEquipo(List <Jugador> jugadores){
-//        return (jugadores.stream().map(jugador -> jugador.habilidadJugador()).reduce(0.0, Double::sum))/jugadores.size();
-//    }
-
-    //public Integer valorArbitrario(){
-    //    return (int)(Math.random()*10)+1;
-    //}
+    public abstract Boolean puedeBloquear(Jugador unjugador) ;
 
     /** Getters **/
 
@@ -63,9 +58,30 @@ public abstract class Jugador {
         return skillsJugador;
     }
 
-    public Integer getPesoJugador() {
+    public Double getPesoJugador() {
         return pesoJugador;
     }
+
+    /** Punto 3 **/
+    public abstract String tipoJugador();
+
+    public abstract Boolean esBlancoUtil(Equipo miEquipo);
+
+    public Boolean tenesLaQuaffle(){
+        if (this.pelota.tipoPelota().equals("Quaffle")){
+            tieneLaQuaffle=true;
+        }
+        return tieneLaQuaffle;
+    }
+    protected Boolean tieneLaQuaffle=false;
+
+    /** Punto 4.c **/
+   // public void esGolpeadoPorUnaBludger(){
+        //this.skillsJugador=skillsJugador-2;
+       // this.escoba.recibeGolpe();
+   // }
+
+
 
 
 
