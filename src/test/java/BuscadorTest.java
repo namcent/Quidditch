@@ -73,8 +73,6 @@ public class BuscadorTest {
     @Test
     void esBlancoUtilTest (){
 
-        assertTrue(buscador1.)
-
 
     }
 

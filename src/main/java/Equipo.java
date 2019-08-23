@@ -1,5 +1,4 @@
 import exceptions.EquipoCompletoException;
-import exceptions.EquipoVacioException;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -35,9 +34,6 @@ public class Equipo {
         getJugadores().add(jugador);
     }
     public Integer cantDeJugadoresEnEquipo(){
-        if(jugadores.isEmpty()) {
-            throw new EquipoVacioException("El equipo esta vacio");
-        }
         return jugadores.size();
     }
 
