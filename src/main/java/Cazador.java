@@ -104,6 +104,10 @@ public class Cazador extends Jugador {
         }
     }
 
+    public void setFunctions(Functions functions) {
+        this.functions = functions;
+    }
+
     //public Boolean pudoBloquear(Jugador jugador){return finTurno();}
 
 }
