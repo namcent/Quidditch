@@ -1,3 +1,6 @@
+import exceptions.EquipoCompletoException;
+import exceptions.EquipoVacioException;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -26,7 +29,16 @@ public class Equipo {
 
 
     public void agregarJugador(Jugador jugador) {
+        if(this.cantDeJugadoresEnEquipo()==7){
+            throw new EquipoCompletoException("El equipo esta completo");
+        }
         getJugadores().add(jugador);
+    }
+    public Integer cantDeJugadoresEnEquipo(){
+        if(jugadores.isEmpty()) {
+            throw new EquipoVacioException("El equipo esta vacio");
+        }
+        return jugadores.size();
     }
 
     public Double promedioHabilidadEquipo() {
