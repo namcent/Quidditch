@@ -25,9 +25,9 @@ public class Equipo {
     }
 
     public Integer cantDeJugadoresEnEquipo(){
-        if(jugadores.isEmpty()) {
-            throw new EquipoVacioException("El equipo esta vacio");
-        }
+//        if(jugadores.isEmpty()) {
+//            throw new EquipoVacioException("El equipo esta vacio");
+//        }
         return jugadores.size();
     }
 
