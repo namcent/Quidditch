@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BuscadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BuscadorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Equipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equipo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/EquipoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EquipoTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CazadorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1053">
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/EquipoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="68" column="84" selection-start-line="68" selection-start-column="84" selection-end-line="68" selection-end-column="84" />
+            <state relative-caret-position="230">
+              <caret line="79" column="42" lean-forward="true" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +55,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Equipo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="220">
+              <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1257#1258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,10 +179,10 @@
         <option value="$PROJECT_DIR$/src/test/java/BludgerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/EquipoCompletoException.java" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/EquipoVacioException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Equipo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Buscador.java" />
         <option value="$PROJECT_DIR$/src/test/java/BuscadorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/EquipoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Equipo.java" />
       </list>
     </option>
   </component>
@@ -197,7 +197,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="45" />
     <option name="y" value="5" />
     <option name="width" value="1386" />
@@ -382,12 +382,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GolpeadorTest_puedeBloquearTest - 2019.08.22 at 11h 26m 04s.xml">
-      <configuration name="GolpeadorTest.puedeBloquearTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GolpeadorTest_puedeBloquearTest - 2019.08.22 at 11h 30m 15s.xml">
-      <configuration name="GolpeadorTest.puedeBloquearTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GolpeadorTest_puedeBloquearTest - 2019.08.22 at 11h 35m 33s.xml">
       <configuration name="GolpeadorTest.puedeBloquearTest" configurationId="JUnit" />
     </history-entry>
@@ -412,6 +406,12 @@
     <history-entry file="EquipoTest_promedioHabilidadEquipo - 2019.08.23 at 12h 25m 05s.xml">
       <configuration name="EquipoTest.promedioHabilidadEquipo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="EquipoTest_promedioHabilidadEquipo - 2019.08.23 at 12h 44m 00s.xml">
+      <configuration name="EquipoTest.promedioHabilidadEquipo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EquipoTest_promedioHabilidadEquipo - 2019.08.23 at 13h 25m 04s.xml">
+      <configuration name="EquipoTest.promedioHabilidadEquipo" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +423,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -436,7 +436,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.25816995" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49848714" weight="0.3496732" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49848714" visible="true" weight="0.3496732" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.17320262" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -489,7 +489,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Equipo.java</url>
-          <line>30</line>
+          <line>29</line>
           <properties class="Equipo" method="agregarJugador">
             <option name="EMULATED" value="true" />
           </properties>
@@ -785,33 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Golpeador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Equipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/EquipoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="68" column="84" selection-start-line="68" selection-start-column="84" selection-end-line="68" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BuscadorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -826,6 +799,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1053">
           <caret line="130" column="6" lean-forward="true" selection-start-line="130" selection-start-column="6" selection-end-line="130" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Golpeador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Equipo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EquipoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="79" column="42" lean-forward="true" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

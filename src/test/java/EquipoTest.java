@@ -66,7 +66,7 @@ public class EquipoTest {
 
     @Test
     void promedioHabilidadEquipo(){
-        //tira null. No puedo encontrar el error. Puede ser algo de las excepciones.
+
         when(cazador1.habilidadJugador()).thenReturn(100.0);
         when(golpeador1.habilidadJugador()).thenReturn(400.0);
         when(cazador2.habilidadJugador()).thenReturn(400.0);
