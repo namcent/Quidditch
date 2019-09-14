@@ -81,6 +81,6 @@ public class Cazador extends Jugador {
 
 
     public void setFunctions(Functions functions) {
-        this.functions = functions;
-    }
+    this.functions = functions;
+}
 }

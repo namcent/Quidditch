@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import main.java.Utils.Functions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -16,11 +18,11 @@ public class GuardianTest {
     private Equipo slytherin;
     private Guardian guardian3;
     private Quaffle quaffle;
+    private Functions functions;
 
 
     @BeforeEach
     void setUp() {
-
 
         slytherin = mock(Equipo.class);
         escoba1 = mock(SaetaDeFuego.class);
@@ -30,6 +32,7 @@ public class GuardianTest {
         guardian2 = new Guardian(10, 10, 100.0, 10.0, escoba1, slytherin, quaffle);
         guardian3 = new Guardian(50, 80, 100., 300.0, escoba1, slytherin, quaffle);
         quaffle = mock (Quaffle.class);
+        functions = mock(Functions.class);
 
     }
 
@@ -51,10 +54,10 @@ public class GuardianTest {
     }
 
     @Test
-    //COMO LE PASO UN NUMERO EN THEN RETURN. COMO MANEJO UN RANDOM
-
-    void puedeBloquaerTest (){
-
+    //
+    void puedeBloquearTest (){
+         guardian1.setFunctions(functions);
+        when(functions.getRandomElement(any())).thenReturn(3);
         assertTrue(guardian1.puedeBloquear(guardian2));
 
     }
