@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cazador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cazador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Guardian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Guardian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GuardianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GuardianTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="a33964ab-360c-46d5-b981-8478b21fb6b8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
