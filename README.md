@@ -1,4 +1,3 @@
 # Quidditch
-Integrantes: Nadia Centanaro, Manuela Gomez Martin.
+Integrantes: Nadia C., Manuela Gomez Martin.
 
-pd: no sabemos si se agrego bien el tag.
